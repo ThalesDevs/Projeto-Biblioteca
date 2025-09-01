@@ -1,0 +1,90 @@
+
+{% extends "base.html" %}
+{% block title %}Finalizar Pedidos{% endblock %}
+{% block content %}
+<div class="max-w-4xl mx-auto mt-8 bg-white shadow rounded-xl p-6">
+  <h2 class="text-2xl font-semibold mb-4">Selecione os pedidos para pagar</h2>
+  <form id="payForm" method="post" action="/pagamentos/lote" class="space-y-4">
+    <table class="w-full table-auto border">
+      <thead class="bg-gray-50">
+        <tr>
+          <th class="p-2">Selecionar</th>
+          <th class="p-2">Pedido</th>
+          <th class="p-2">Itens</th>
+          <th class="p-2">Total (R$)</th>
+          <th class="p-2">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for p in pedidos %}
+        <tr class="border-t">
+          <td class="p-2 text-center">
+            {% if p.status.value == "PENDENTE" %}
+            <input type="checkbox" name="pedido_ids" value="{{ p.id }}" class="sel">
+            {% endif %}
+          </td>
+          <td class="p-2">#{{ p.id }}</td>
+          <td class="p-2">{{ p.total_itens }}</td>
+          <td class="p-2 total" data-v="{{ '%.2f' % p.total }}">{{ '%.2f' % p.total }}</td>
+          <td class="p-2">{{ p.status.value }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+
+    <div class="mt-4 p-4 bg-gray-50 rounded-lg">
+      <p class="text-lg">Total selecionado: <span id="totalSelecionado">0.00</span></p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <input type="text" name="numero" placeholder="Número do cartão" class="border p-2 rounded" required>
+      <input type="text" name="nome" placeholder="Nome impresso" class="border p-2 rounded" required>
+      <input type="text" name="validade" placeholder="MM/YY" class="border p-2 rounded" required>
+      <input type="text" name="cvv" placeholder="CVV" class="border p-2 rounded" required>
+      <input type="text" name="bandeira" placeholder="Bandeira (opcional)" class="border p-2 rounded">
+    </div>
+
+    <button class="mt-4 px-4 py-2 rounded bg-emerald-600 text-white">Pagar Selecionados</button>
+  </form>
+</div>
+<script>
+  const sel = document.querySelectorAll('.sel');
+  const totalEls = document.querySelectorAll('.total');
+  const totalSpan = document.getElementById('totalSelecionado');
+  function updateTotal() {
+    let sum = 0;
+    sel.forEach((c, i) => { if (c.checked) sum += parseFloat(totalEls[i].dataset.v); });
+    totalSpan.textContent = sum.toFixed(2);
+  }
+  sel.forEach(c => c.addEventListener('change', updateTotal));
+  updateTotal();
+
+  // transform form submit to JSON expected by /pagamentos/lote
+  document.getElementById('payForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const fd = new FormData(e.target);
+    const ids = fd.getAll('pedido_ids').map(x => parseInt(x));
+    if (ids.length === 0) { alert('Selecione ao menos um pedido.'); return; }
+    const payload = {
+      numero: fd.get('numero'),
+      nome: fd.get('nome'),
+      validade: fd.get('validade'),
+      cvv: fd.get('cvv'),
+      bandeira: fd.get('bandeira') || null
+    };
+    const resp = await fetch('/pagamentos/lote', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ pedido_ids: ids, **payload })
+    });
+    if (resp.ok) {
+      const data = await resp.json();
+      alert('Pagamento processado!');
+      location.reload();
+    } else {
+      const err = await resp.json().catch(()=>({detail:'Erro'}));
+      alert('Falha: ' + (err.detail || resp.status));
+    }
+  });
+</script>
+{% endblock %}

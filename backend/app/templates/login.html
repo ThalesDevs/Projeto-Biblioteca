@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="flex items-center justify-center min-h-screen">
+    <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
+        <h2 class="text-3xl font-bold text-center mb-6">Entrar na Biblioteca</h2>
+
+        {% if erro %}
+            <div class="mb-4 p-3 bg-red-100 text-red-700 rounded text-center">
+                {{ erro }}
+            </div>
+        {% endif %}
+
+        <form action="/auth/login" method="post" class="space-y-4">
+            <div class="flex flex-col">
+                <label for="email" class="mb-1 text-gray-700 font-semibold">Email</label>
+                <input type="email" id="email" name="email" placeholder="seu@email.com" required
+                    class="p-3 border rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+                    value="{{ email or '' }}">
+            </div>
+
+            <div class="flex flex-col">
+                <label for="senha" class="mb-1 text-gray-700 font-semibold">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="••••••••" required
+                    class="p-3 border rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+            </div>
+
+            <button type="submit"
+                class="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-700 transition-colors font-semibold text-lg">
+                Entrar
+            </button>
+        </form>
+
+        <p class="mt-6 text-center text-gray-600">
+            Não tem uma conta?
+            <a href="/auth/cadastro" class="text-blue-600 hover:underline font-semibold">Cadastre-se</a>
+        </p>
+    </div>
+</div>
+{% endblock %}
