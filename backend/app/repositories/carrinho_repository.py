@@ -26,10 +26,10 @@ class CarrinhoRepository:
             self.db.commit()
         return item
 
-    def atualizar_quantidade(self, usuario_id: int, livro_id: int, nova_quantidade: int):
+    def atualizar_quantidade_item(self, usuario_id: int, livro_id: int, quantidade: int):
         item = self.db.query(ItemCarrinho).filter_by(usuario_id=usuario_id, livro_id=livro_id).first()
         if item:
-            item.quantidade = nova_quantidade
+            item.quantidade = quantidade
             self.db.commit()
             self.db.refresh(item)
         return item

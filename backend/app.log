@@ -23277,3 +23277,165 @@ connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection re
 2025-09-01 10:50:09,891 - BibliotecaApp - INFO - GET /usuarios/listar → 200 (0.018s)
 2025-09-01 10:50:30,090 - BibliotecaApp - INFO - GET /usuarios/me → 200 (0.018s)
 2025-09-01 10:50:49,145 - BibliotecaApp - INFO - === APLICAÇÃO ENCERRADA ===
+2025-09-01 13:22:28,706 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-01 13:22:28,709 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-01 13:22:28,773 - BibliotecaApp - INFO - ✅ Tabelas criadas/verificadas com sucesso
+2025-09-01 13:22:40,844 - BibliotecaApp - INFO - GET /docs → 200 (0.006s)
+2025-09-01 13:22:41,037 - BibliotecaApp - INFO - GET /openapi.json → 200 (0.069s)
+2025-09-01 13:22:44,273 - BibliotecaApp - INFO - GET / → 200 (0.035s)
+2025-09-01 13:22:48,303 - BibliotecaApp - INFO - GET /auth/login → 404 (0.005s)
+2025-09-01 13:22:53,322 - BibliotecaApp - INFO - GET / → 200 (0.002s)
+2025-09-01 13:24:11,565 - BibliotecaApp - INFO - === APLICAÇÃO ENCERRADA ===
+2025-09-01 13:24:17,666 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-01 13:24:17,666 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-01 13:24:17,708 - BibliotecaApp - INFO - ✅ Tabelas criadas/verificadas com sucesso
+2025-09-01 13:24:20,602 - BibliotecaApp - INFO - GET / → 200 (0.039s)
+2025-09-01 13:25:06,739 - BibliotecaApp - INFO - === APLICAÇÃO ENCERRADA ===
+2025-09-01 13:25:12,603 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-01 13:25:12,603 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-01 13:25:12,674 - BibliotecaApp - INFO - ✅ Tabelas criadas/verificadas com sucesso
+2025-09-01 13:25:15,223 - BibliotecaApp - INFO - GET / → 200 (0.031s)
+2025-09-01 13:25:26,222 - BibliotecaApp - INFO - === APLICAÇÃO ENCERRADA ===
+2025-09-01 13:25:32,459 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-01 13:25:32,460 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-01 13:25:32,515 - BibliotecaApp - INFO - ✅ Tabelas criadas/verificadas com sucesso
+2025-09-01 13:25:32,806 - BibliotecaApp - INFO - GET / → 200 (0.035s)
+2025-09-01 13:26:11,442 - BibliotecaApp - INFO - GET /auth/login → 404 (0.007s)
+2025-09-01 13:27:35,387 - BibliotecaApp - INFO - === APLICAÇÃO ENCERRADA ===
+2025-09-01 13:27:40,830 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-01 13:27:40,831 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-01 13:27:40,872 - BibliotecaApp - INFO - ✅ Tabelas criadas/verificadas com sucesso
+2025-09-01 13:27:43,338 - BibliotecaApp - INFO - GET /auth/login → 404 (0.018s)
+2025-09-01 13:27:44,301 - BibliotecaApp - INFO - GET /login → 404 (0.001s)
+2025-09-01 13:27:44,825 - BibliotecaApp - INFO - GET /login → 404 (0.001s)
+2025-09-01 13:27:45,262 - BibliotecaApp - INFO - GET /login → 404 (0.003s)
+2025-09-01 13:27:45,465 - BibliotecaApp - INFO - GET /login → 404 (0.001s)
+2025-09-01 13:27:45,698 - BibliotecaApp - INFO - GET /login → 404 (0.001s)
+2025-09-01 13:27:45,906 - BibliotecaApp - INFO - GET /login → 404 (0.000s)
+2025-09-01 13:27:46,094 - BibliotecaApp - INFO - GET /login → 404 (0.001s)
+2025-09-01 13:27:46,847 - BibliotecaApp - INFO - GET /auth/cadastro → 404 (0.002s)
+2025-09-01 13:27:47,443 - BibliotecaApp - INFO - GET /login → 404 (0.002s)
+2025-09-01 13:28:16,455 - BibliotecaApp - INFO - GET /login → 404 (0.003s)
+2025-09-01 13:28:28,251 - BibliotecaApp - INFO - GET /auth/cadastro → 404 (0.003s)
+2025-09-01 13:28:29,943 - BibliotecaApp - INFO - GET / → 200 (0.026s)
+2025-09-01 13:29:06,137 - BibliotecaApp - INFO - === APLICAÇÃO ENCERRADA ===
+2025-09-01 13:29:12,232 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-01 13:29:12,235 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-01 13:29:12,280 - BibliotecaApp - INFO - ✅ Tabelas criadas/verificadas com sucesso
+2025-09-01 13:29:15,435 - BibliotecaApp - INFO - GET /login → 404 (0.019s)
+2025-09-01 13:29:16,655 - BibliotecaApp - INFO - GET /login → 404 (0.001s)
+2025-09-01 13:29:17,665 - BibliotecaApp - INFO - GET /login → 404 (0.000s)
+2025-09-01 13:29:18,317 - BibliotecaApp - INFO - GET /login → 404 (0.002s)
+2025-09-01 13:29:21,046 - BibliotecaApp - INFO - GET /login → 404 (0.001s)
+2025-09-01 13:29:50,236 - BibliotecaApp - INFO - === APLICAÇÃO ENCERRADA ===
+2025-09-01 13:29:56,691 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-01 13:29:56,691 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-01 13:29:56,737 - BibliotecaApp - INFO - ✅ Tabelas criadas/verificadas com sucesso
+2025-09-01 13:30:01,334 - BibliotecaApp - INFO - GET /login → 404 (0.021s)
+2025-09-01 13:30:01,982 - BibliotecaApp - INFO - GET /login → 404 (0.001s)
+2025-09-01 13:30:06,907 - BibliotecaApp - INFO - GET /.well-known/appspecific/com.chrome.devtools.json → 404 (0.004s)
+2025-09-01 13:31:29,953 - BibliotecaApp - INFO - === APLICAÇÃO ENCERRADA ===
+2025-09-01 13:31:36,107 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-01 13:31:36,111 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-01 13:31:36,167 - BibliotecaApp - INFO - ✅ Tabelas criadas/verificadas com sucesso
+2025-09-01 13:31:36,224 - BibliotecaApp - INFO - GET /login → 404 (0.019s)
+2025-09-01 13:31:36,268 - BibliotecaApp - INFO - GET /.well-known/appspecific/com.chrome.devtools.json → 404 (0.002s)
+2025-09-01 13:38:01,472 - BibliotecaApp - INFO - === APLICAÇÃO ENCERRADA ===
+2025-09-01 13:38:07,303 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-01 13:38:07,303 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-01 13:38:07,369 - BibliotecaApp - INFO - ✅ Tabelas criadas/verificadas com sucesso
+2025-09-01 13:38:53,707 - BibliotecaApp - INFO - GET / → 200 (0.038s)
+2025-09-01 13:38:55,631 - BibliotecaApp - INFO - GET /auth/login → 404 (0.004s)
+2025-09-01 13:39:43,236 - BibliotecaApp - INFO - GET /auth/login → 404 (0.002s)
+2025-09-01 13:41:39,049 - BibliotecaApp - INFO - === APLICAÇÃO ENCERRADA ===
+2025-09-01 13:41:42,064 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-01 13:41:42,065 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-01 13:41:42,106 - BibliotecaApp - INFO - ✅ Tabelas criadas/verificadas com sucesso
+2025-09-01 13:42:33,783 - BibliotecaApp - INFO - GET / → 200 (0.119s)
+2025-09-01 13:42:35,639 - BibliotecaApp - INFO - GET /auth/login → 200 (0.067s)
+2025-09-01 13:42:56,362 - BibliotecaApp - INFO - POST /auth/login → 401 (0.139s)
+2025-09-01 13:43:03,632 - BibliotecaApp - INFO - POST /auth/login → 401 (0.015s)
+2025-09-01 13:44:42,621 - BibliotecaApp - INFO - POST /auth/login → 302 (0.298s)
+2025-09-01 13:44:42,633 - BibliotecaApp - INFO - GET / → 200 (0.007s)
+2025-09-01 13:44:48,439 - BibliotecaApp - INFO - GET /usuarios/editar → 200 (0.029s)
+2025-09-01 13:44:54,137 - BibliotecaApp - INFO - GET /livros → 307 (0.001s)
+2025-09-01 13:44:54,178 - BibliotecaApp - INFO - GET /livros/ → 200 (0.037s)
+2025-09-01 13:44:54,213 - BibliotecaApp - INFO - GET /livros/string → 422 (0.004s)
+2025-09-01 13:50:11,322 - BibliotecaApp - INFO - POST /api/carrinho/adicionar → 404 (0.009s)
+2025-09-01 13:52:40,913 - BibliotecaApp - INFO - === APLICAÇÃO ENCERRADA ===
+2025-09-01 13:52:43,586 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-01 13:52:43,586 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-01 13:52:43,643 - BibliotecaApp - INFO - ✅ Tabelas criadas/verificadas com sucesso
+2025-09-01 13:53:47,404 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-01 13:53:47,404 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-01 13:53:47,456 - BibliotecaApp - INFO - ✅ Tabelas criadas/verificadas com sucesso
+2025-09-01 13:53:50,380 - BibliotecaApp - INFO - GET / → 200 (0.086s)
+2025-09-01 13:53:53,528 - BibliotecaApp - INFO - GET /livros → 307 (0.001s)
+2025-09-01 13:53:53,594 - BibliotecaApp - INFO - GET /livros/ → 200 (0.061s)
+2025-09-01 13:53:53,620 - BibliotecaApp - INFO - GET /livros/string → 422 (0.004s)
+2025-09-01 13:53:54,957 - BibliotecaApp - INFO - GET /carrinho → 307 (0.002s)
+2025-09-01 13:53:54,969 - CarrinhoRouter - ERROR - Erro ao carregar carrinho: 'dict' object has no attribute 'id'
+Traceback (most recent call last):
+  File "C:\Users\Colaborador\biblioteca\backend\app\routers\carrinho_router.py", line 28, in pagina_carrinho
+    itens = service.listar_itens(user.id)
+                                 ^^^^^^^
+AttributeError: 'dict' object has no attribute 'id'
+2025-09-01 13:53:54,992 - BibliotecaApp - INFO - GET /carrinho/ → 500 (0.030s)
+2025-09-01 13:54:03,736 - BibliotecaApp - INFO - GET /auth/cadastro → 200 (0.029s)
+2025-09-01 13:54:05,645 - BibliotecaApp - INFO - GET / → 200 (0.006s)
+2025-09-01 13:54:06,911 - BibliotecaApp - INFO - GET /auth/logout → 302 (0.003s)
+2025-09-01 13:54:06,918 - BibliotecaApp - INFO - GET / → 200 (0.002s)
+2025-09-01 13:54:08,516 - BibliotecaApp - INFO - GET /auth/cadastro → 200 (0.007s)
+2025-09-01 13:58:42,883 - BibliotecaApp - INFO - === APLICAÇÃO ENCERRADA ===
+2025-09-01 13:58:47,011 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-01 13:58:47,013 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-01 13:58:47,098 - BibliotecaApp - INFO - ✅ Tabelas criadas/verificadas com sucesso
+2025-09-01 14:01:36,925 - BibliotecaApp - INFO - === APLICAÇÃO ENCERRADA ===
+2025-09-01 14:01:41,348 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-01 14:01:41,348 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-01 14:01:41,439 - BibliotecaApp - INFO - ✅ Tabelas criadas/verificadas com sucesso
+2025-09-01 14:05:06,459 - BibliotecaApp - INFO - === APLICAÇÃO ENCERRADA ===
+2025-09-01 14:05:09,999 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-01 14:05:09,999 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-01 14:05:10,072 - BibliotecaApp - INFO - ✅ Tabelas criadas/verificadas com sucesso
+2025-09-01 14:14:37,170 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-01 14:14:37,172 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-01 14:14:37,241 - BibliotecaApp - INFO - ✅ Tabelas criadas/verificadas com sucesso
+2025-09-01 14:14:41,857 - BibliotecaApp - INFO - GET / → 200 (0.056s)
+2025-09-01 14:14:48,704 - BibliotecaApp - INFO - GET /auth/login → 200 (0.098s)
+2025-09-01 14:14:51,879 - BibliotecaApp - INFO - POST /auth/login → 302 (0.763s)
+2025-09-01 14:14:51,919 - BibliotecaApp - INFO - GET / → 200 (0.025s)
+2025-09-01 14:14:53,809 - BibliotecaApp - INFO - GET /carrinho → 307 (0.004s)
+2025-09-01 14:14:53,990 - BibliotecaApp - INFO - GET /carrinho/ → 200 (0.165s)
+2025-09-01 14:14:56,353 - BibliotecaApp - INFO - GET /livros → 307 (0.004s)
+2025-09-01 14:14:56,500 - BibliotecaApp - INFO - GET /livros/ → 200 (0.142s)
+2025-09-01 14:14:56,596 - BibliotecaApp - INFO - GET /livros/string → 422 (0.016s)
+2025-09-01 14:14:58,014 - BibliotecaApp - INFO - POST /api/carrinho/adicionar → 404 (0.021s)
+2025-09-01 14:15:07,439 - BibliotecaApp - INFO - GET /auth/login → 200 (0.037s)
+2025-09-01 14:15:12,192 - BibliotecaApp - INFO - GET /livros → 307 (0.004s)
+2025-09-01 14:15:12,235 - BibliotecaApp - INFO - GET /livros/ → 200 (0.030s)
+2025-09-01 14:15:12,331 - BibliotecaApp - INFO - GET /livros/string → 422 (0.012s)
+2025-09-01 14:15:14,565 - BibliotecaApp - INFO - POST /api/carrinho/adicionar → 404 (0.006s)
+2025-09-01 14:15:20,430 - BibliotecaApp - INFO - GET /livros/string → 422 (0.011s)
+2025-09-01 14:15:38,938 - BibliotecaApp - INFO - GET /perfil → 404 (0.002s)
+2025-09-01 14:15:39,031 - BibliotecaApp - INFO - GET /favicon.ico → 404 (0.001s)
+2025-09-01 14:15:40,870 - BibliotecaApp - INFO - GET / → 200 (0.001s)
+2025-09-01 14:15:43,160 - BibliotecaApp - INFO - GET /auth/login → 200 (0.010s)
+2025-09-01 14:16:04,407 - BibliotecaApp - INFO - POST /auth/login → 302 (0.304s)
+2025-09-01 14:16:04,420 - BibliotecaApp - INFO - GET / → 200 (0.007s)
+2025-09-01 14:16:11,079 - BibliotecaApp - INFO - GET /livros → 307 (0.001s)
+2025-09-01 14:16:11,100 - BibliotecaApp - INFO - GET /livros/ → 200 (0.015s)
+2025-09-01 14:16:11,134 - BibliotecaApp - INFO - GET /livros/string → 422 (0.003s)
+2025-09-01 14:16:16,121 - BibliotecaApp - INFO - GET /api/livros/cadastrar-form → 404 (0.002s)
+2025-09-01 14:16:30,566 - BibliotecaApp - INFO - GET /auth/logout → 302 (0.008s)
+2025-09-01 14:16:30,574 - BibliotecaApp - INFO - GET / → 200 (0.002s)
+2025-09-01 14:16:32,866 - BibliotecaApp - INFO - GET /auth/login → 200 (0.015s)
+2025-09-01 14:16:39,341 - BibliotecaApp - INFO - POST /auth/login → 401 (0.025s)
+2025-09-01 14:17:21,648 - BibliotecaApp - INFO - POST /auth/login → 403 (0.557s)
+2025-09-01 14:18:05,403 - BibliotecaApp - INFO - POST /auth/login → 302 (0.536s)
+2025-09-01 14:18:05,433 - BibliotecaApp - INFO - GET / → 200 (0.018s)
+2025-09-01 14:18:08,903 - BibliotecaApp - INFO - GET /livros → 307 (0.004s)
+2025-09-01 14:18:08,953 - BibliotecaApp - INFO - GET /livros/ → 200 (0.035s)
+2025-09-01 14:18:09,035 - BibliotecaApp - INFO - GET /livros/string → 422 (0.014s)
+2025-09-01 14:18:10,199 - BibliotecaApp - INFO - GET /api/livros/cadastrar-form → 404 (0.005s)
+2025-09-01 14:18:18,747 - BibliotecaApp - INFO - === APLICAÇÃO ENCERRADA ===

@@ -74,10 +74,7 @@ def get_current_user_from_request(request: Request, db: Session) -> Optional[Usu
 
 
 def get_current_user_dependency(request: Request, db: Session = Depends(get_db)) -> Optional[Dict[str, Any]]:
-    """
-    Versão para usar como dependência do FastAPI
-    Retorna dados serializáveis, não objetos SQLAlchemy - CORRIGIDO
-    """
+
     try:
         usuario = get_current_user_from_request(request, db)
         if not usuario:

@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 from app.dependencies import get_db
 from app.repositories.confirmacao_repository import ConfirmacaoRepository
 
-router = APIRouter(prefix="/email", tags=["Email"])
+router = APIRouter(tags=["Email"])
 templates = Jinja2Templates(directory="app/templates")
 
 @router.get("/confirmar", response_class=HTMLResponse)

@@ -7,7 +7,7 @@ from app.service.pagamento_service import PagamentoService
 from app.domain.schemas.pagamento_schemas import PagamentoCartaoIn, PagamentoOut
 from app.domain.models.usuario.usuario import Usuario
 
-router = APIRouter(prefix="/pagamentos", tags=["Pagamentos"])
+router = APIRouter(tags=["Pagamentos"])
 
 @router.post("/pedido/{pedido_id}/cartao", response_model=PagamentoOut, status_code=status.HTTP_201_CREATED)
 def pagar_pedido_cartao(pedido_id: int, payload: PagamentoCartaoIn, db: Session = Depends(get_db), user: Usuario = Depends(get_current_user_dependency())):

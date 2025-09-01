@@ -11,7 +11,7 @@ from fastapi.templating import Jinja2Templates
 from app.utils.template_utils import get_usuario_context
 
 templates = Jinja2Templates(directory="app/templates")
-router = APIRouter(prefix="/auth", tags=["Autenticação"])
+router = APIRouter(tags=["Autenticação"])
 
 
 from app.domain.schemas.token_schema import TokenResponse
