@@ -20,7 +20,7 @@ O backend é desenvolvido com **FastAPI** e renderização de páginas via **Jin
 ---
 
 ## 🗂 Estrutura do Projeto
-
+```bash
 Projeto-Biblioteca/
 ├─ backend/
 │ ├─ main.py
@@ -38,7 +38,7 @@ Projeto-Biblioteca/
 ├─ README.md
 ├─ .gitignore
 └─ .env (não versionado)
-
+```
 
 ---
 
