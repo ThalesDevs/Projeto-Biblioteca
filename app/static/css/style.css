@@ -1,0 +1,161 @@
+/* ==============================
+   STYLE.CSS - Biblioteca Online
+   ============================== */
+
+/* ===== Body e fontes ===== */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== Links ===== */
+a {
+    text-decoration: none;
+    color: #0d6efd;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0a58ca;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-size: 1rem;
+}
+
+.nav-link.active {
+    color: #ffc107 !important;
+}
+
+/* ===== Main container ===== */
+main.container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* ===== Cards de livros ===== */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #6c757d;
+}
+
+/* ===== Botões ===== */
+.btn {
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.btn-primary:hover {
+    background-color: #0a58ca;
+    border-color: #0a58ca;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: #212529;
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* ===== Forms ===== */
+.form-control {
+    border-radius: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 5px rgba(13,110,253,0.5);
+}
+
+/* ===== Alertas ===== */
+.alert {
+    border-radius: 8px;
+    padding: 15px 20px;
+    font-size: 0.95rem;
+}
+
+/* ===== Tabelas ===== */
+table {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #0d6efd;
+    color: white;
+}
+
+tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.3rem;
+    }
+    .card-title {
+        font-size: 1rem;
+    }
+}
+
+/* ===== Efeitos adicionais ===== */
+.fade-in {
+    animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

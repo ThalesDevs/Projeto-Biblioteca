@@ -1,0 +1,103 @@
+<!-- templates/emails/confirmacao_base.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ titulo }} - {{ nome_site }}</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background-color: #f4f4f4;">
+    <div style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: white; border: 1px solid #ddd;">
+        
+        <!-- Header similar ao seu base.html -->
+        <div style="text-align: center; margin-bottom: 30px; padding: 20px; background-color: {{ cor_botao }}; color: white;">
+            <h1 style="margin: 0; font-size: 28px;">{{ nome_site }}</h1>
+        </div>
+        
+        <h2 style="color: {{ cor_botao }}; margin-bottom: 20px;">{{ icone }} {{ titulo }}</h2>
+        
+        <p style="font-size: 16px;">Olá <strong>{{ nome }}</strong>,</p>
+        
+        <!-- Conteúdo específico por tipo -->
+        {% if tipo == 'cadastro' %}
+            <p>Obrigado por se cadastrar na nossa plataforma!</p>
+            <p>Para ativar sua conta e começar a usar todos os recursos, clique no botão abaixo:</p>
+        {% elif tipo == 'alteracao' %}
+            <p>Você solicitou a alteração do seu email para:</p>
+            <div style="background-color: #e7f3ff; padding: 15px; border-radius: 5px; margin: 15px 0; border-left: 4px solid #007bff;">
+                <p style="margin: 0; font-size: 16px; font-weight: bold; color: #007bff;">
+                    📧 {{ novo_email }}
+                </p>
+            </div>
+            <p>Para confirmar esta alteração, clique no botão abaixo:</p>
+        {% endif %}
+        
+        <!-- Botão de ação -->
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="{{ link_confirmacao }}" 
+               style="background-color: {{ cor_botao }}; color: white; padding: 15px 30px; 
+                      text-decoration: none; border-radius: 5px; display: inline-block;
+                      font-weight: bold; font-size: 16px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                      transition: background-color 0.3s;">
+                {{ texto_botao }}
+            </a>
+        </div>
+        
+        <!-- Link alternativo -->
+        <div style="background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin: 20px 0;">
+            <p style="margin: 0; font-size: 14px; color: #666;">
+                <strong>Ou copie e cole este link no seu navegador:</strong>
+            </p>
+            <p style="word-break: break-all; background-color: #e9ecef; padding: 10px; 
+                      border-radius: 3px; border-left: 4px solid {{ cor_botao }}; margin: 10px 0 0 0; font-family: monospace;">
+                {{ link_confirmacao }}
+            </p>
+        </div>
+        
+        <!-- Aviso de expiração -->
+        {% if tipo == 'cadastro' %}
+            <div style="background-color: #fff3cd; padding: 15px; border-radius: 5px; margin: 20px 0; border-left: 4px solid #ffc107;">
+                <p style="margin: 0; color: #856404;">
+                    <strong>⚠️ Importante:</strong> Este link expira em {{ tempo_expiracao }} por segurança.
+                </p>
+            </div>
+        {% elif tipo == 'alteracao' %}
+            <div style="background-color: #f8d7da; padding: 15px; border-radius: 5px; margin: 20px 0; border-left: 4px solid #dc3545;">
+                <p style="margin: 0; color: #721c24;">
+                    <strong>⚠️ Atenção:</strong> Este link expira em {{ tempo_expiracao }} por segurança.
+                </p>
+            </div>
+        {% endif %}
+        
+        <!-- Aviso de segurança -->
+        {% if tipo == 'alteracao' %}
+            <div style="background-color: #d1ecf1; padding: 15px; border-radius: 5px; margin: 20px 0; border-left: 4px solid #17a2b8;">
+                <p style="margin: 0; color: #0c5460;">
+                    <strong>🔒 Segurança:</strong> Se você não solicitou esta alteração, 
+                    ignore este email ou entre em contato conosco imediatamente.
+                </p>
+            </div>
+        {% endif %}
+        
+        <hr style="border: none; border-top: 1px solid #eee; margin: 30px 0;">
+        
+        <!-- Footer similar ao seu base.html -->
+        <div style="text-align: center; padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+            {% if tipo == 'cadastro' %}
+                <p style="font-size: 12px; color: #666; margin: 0;">
+                    Se você não solicitou esta confirmação, pode ignorar este email com segurança.<br>
+                    Nenhuma alteração será feita em sua conta.
+                </p>
+            {% elif tipo == 'alteracao' %}
+                <p style="font-size: 12px; color: #666; margin: 0;">
+                    Este email foi enviado para {{ novo_email }} a pedido do usuário.<br>
+                    Seu email atual permanecerá ativo até a confirmação.
+                </p>
+            {% endif %}
+            <p style="font-size: 12px; color: #999; margin: 10px 0 0 0;">
+                © 2025 {{ nome_site }} - Todos os direitos reservados
+            </p>
+        </div>
+    </div>
+</body>
+</html>
