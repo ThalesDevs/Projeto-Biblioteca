@@ -13,30 +13,30 @@
     {% endif %}
 
     {% if livros %}
-        <div class="lista-livros">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {% for livro in livros %}
-                <div class="livro-item">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                     {% if livro.capa_url %}
-                        <img src="{{ livro.capa_url }}" alt="Capa do livro {{ livro.titulo }}" class="capa-livro">
+                        <img src="{{ livro.capa_url }}" alt="Capa do livro {{ livro.titulo }}" class="w-full h-64 object-cover">
                     {% endif %}
 
-                    <div class="info-livro">
-                        <h3>{{ livro.titulo }}</h3>
-                        <p><strong>Autor:</strong> {{ livro.autor }}</p>
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">{{ livro.titulo }}</h3>
+                        <p class="text-gray-600 mb-2"><strong>Autor:</strong> {{ livro.autor }}</p>
                         {% if livro.ano %}
-                            <p><strong>Ano:</strong> {{ livro.ano }}</p>
+                            <p class="text-gray-600 mb-2"><strong>Ano:</strong> {{ livro.ano }}</p>
                         {% endif %}
-                        <p><strong>Preço:</strong> R$ {{ "%.2f"|format(livro.preco) }}</p>
-                        <p><strong>Estoque:</strong> {{ livro.estoque }} unidades</p>
+                        <p class="text-lg font-bold text-green-600 mb-2">R$ {{ "%.2f"|format(livro.preco) }}</p>
+                        <p class="text-sm text-gray-500 mb-4"><strong>Estoque:</strong> {{ livro.estoque }} unidades</p>
 
                         {% if livro.estoque > 0 %}
-                            <form action="/api/carrinho/adicionar" method="post" class="form-carrinho">
+                            <form action="/api/carrinho/adicionar" method="post" class="flex items-center">
                                 <input type="hidden" name="livro_id" value="{{ livro.id }}">
-                                <input type="number" name="quantidade" value="1" min="1" max="{{ livro.estoque }}" class="input-quantidade">
-                                <button type="submit" class="btn btn-success">Adicionar ao Carrinho</button>
+                                <input type="number" name="quantidade" value="1" min="1" max="{{ livro.estoque }}" class="w-16 p-2 border rounded-l-md">
+                                <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-r-md hover:bg-blue-700">Adicionar ao Carrinho</button>
                             </form>
                         {% else %}
-                            <p class="estoque-esgotado">Produto esgotado</p>
+                            <p class="text-red-500 font-semibold">Produto esgotado</p>
                         {% endif %}
                     </div>
                 </div>

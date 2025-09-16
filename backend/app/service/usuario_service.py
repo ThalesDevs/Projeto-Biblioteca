@@ -17,14 +17,14 @@ class UsuarioService:
         self.db = db
 
     # --------- Cadastro ---------
-    def registrar(self, usuario_data: UsuarioCreate) -> Usuario:
+    def registrar(self, usuario_data: UsuarioCreate, email_confirmado: bool = False) -> Usuario:
         """Registra novo usuário - CORRIGIDO"""
         if self.repo.buscar_por_email(usuario_data.email):
             raise HTTPException(status_code=400, detail="E-mail já cadastrado")
 
         # Hash da senha
-        usuario_data.senha_hash = pwd_context.hash(usuario_data.senha)
-        return self.repo.criar_usuario(usuario_data)
+        senha_hash = pwd_context.hash(usuario_data.senha)
+        return self.repo.criar_usuario(usuario_data, senha_hash, email_confirmado)
 
     def listar_usuarios(self, email: Optional[str] = None, nome: Optional[str] = None, limite: int = 50) -> List[
         Usuario]:

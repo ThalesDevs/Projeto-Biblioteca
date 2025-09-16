@@ -5,10 +5,9 @@ from app.database import Base
 
 class EnderecoUsuario(Base):
     __tablename__ = "endereco_usuarios"
-    __table_args__ = {"schema": "biblioteca"}  # ajuste se usar schema diferente
 
     id = Column(Integer, primary_key=True, index=True)
-    usuario_id = Column(Integer, ForeignKey("biblioteca.usuarios.id", ondelete="CASCADE"), nullable=False)
+    usuario_id = Column(Integer, ForeignKey("usuarios.id", ondelete="CASCADE"), nullable=False)
     rua = Column(String(255), nullable=False)
     numero = Column(String(50), nullable=True)
     cidade = Column(String(100), nullable=False)

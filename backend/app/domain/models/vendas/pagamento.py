@@ -13,10 +13,9 @@ class StatusPagamento(str, PyEnum):
 
 class Pagamento(Base):
     __tablename__ = "pagamentos"
-    __table_args__ = {"schema": "biblioteca"}
 
     id = Column(Integer, primary_key=True, index=True)
-    pedido_id = Column(Integer, ForeignKey("biblioteca.pedidos.id"), nullable=False, index=True)
+    pedido_id = Column(Integer, ForeignKey("pedidos.id"), nullable=False, index=True)
     valor = Column(Numeric(10,2), nullable=False)
     bandeira = Column(String(20), nullable=True)
     cartao_final = Column(String(20), nullable=True)  # somente ****1234

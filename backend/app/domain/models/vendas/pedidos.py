@@ -7,10 +7,9 @@ from app.domain.models.enums import StatusPedido
 
 class Pedido(Base):
     __tablename__ = "pedidos"
-    __table_args__ = {"schema": "biblioteca"}
 
     id = Column(Integer, primary_key=True, index=True)
-    usuario_id = Column(Integer, ForeignKey("biblioteca.usuarios.id"), nullable=False)
+    usuario_id = Column(Integer, ForeignKey("usuarios.id"), nullable=False)
     status = Column(Enum(StatusPedido), default=StatusPedido.PENDENTE)
     created_at = Column(DateTime, default=datetime.utcnow)
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)

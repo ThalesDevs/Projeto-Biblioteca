@@ -17,6 +17,7 @@ from app.database import Base, engine, SessionLocal
 from app.routers import livro_router, usuario_router, pedido_router, carrinho_router, auth_router
 from app.utils.auth import get_usuario_context_corrigido
 from app.utils.formatters import formatar_preco, formatar_preco_sem_simbolo, formatar_data
+from app.service.livro_service import LivroService
 
 # ================= LOGGING =================
 logging.basicConfig(
@@ -83,6 +84,15 @@ def custom_openapi():
 app.openapi = custom_openapi
 
 # ================= MIDDLEWARE =================
+@app.middleware("http")
+async def log_exceptions(request: Request, call_next):
+    try:
+        return await call_next(request)
+    except Exception as e:
+        print("=== ERRO CAPTURADO ===")
+        traceback.print_exc()
+        raise
+
 app.add_middleware(
     SessionMiddleware,
     secret_key="aj3kL9f#0vPqZ8w!r2Xs",  # usar variável de ambiente em produção
@@ -143,6 +153,9 @@ async def home(request: Request):
     db = SessionLocal()
     try:
         context = get_usuario_context_corrigido(request, db)
+        livro_service = LivroService(db)
+        livros_destaque = livro_service.listar_livros(limite=4)
+        context["livros_destaque"] = livros_destaque
         return templates.TemplateResponse("index.html", context)
     except Exception as e:
         logger.error(f"Erro na página inicial: {e}", exc_info=True)
