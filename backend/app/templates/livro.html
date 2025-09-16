@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}Livros Disponíveis{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Livros à Venda</h2>
+
+    {% if usuario %}
+        <div class="acoes-admin">
+            <a href="/api/livros/cadastrar-form" class="btn btn-primary">Cadastrar Novo Livro</a>
+        </div>
+    {% endif %}
+
+    {% if livros %}
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {% for livro in livros %}
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    {% if livro.capa_url %}
+                        <img src="{{ livro.capa_url }}" alt="Capa do livro {{ livro.titulo }}" class="w-full h-64 object-cover">
+                    {% endif %}
+
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">{{ livro.titulo }}</h3>
+                        <p class="text-gray-600 mb-2"><strong>Autor:</strong> {{ livro.autor }}</p>
+                        {% if livro.ano %}
+                            <p class="text-gray-600 mb-2"><strong>Ano:</strong> {{ livro.ano }}</p>
+                        {% endif %}
+                        <p class="text-lg font-bold text-green-600 mb-2">R$ {{ "%.2f"|format(livro.preco) }}</p>
+                        <p class="text-sm text-gray-500 mb-4"><strong>Estoque:</strong> {{ livro.estoque }} unidades</p>
+
+                        {% if livro.estoque > 0 %}
+                            <form action="/api/carrinho/adicionar" method="post" class="flex items-center">
+                                <input type="hidden" name="livro_id" value="{{ livro.id }}">
+                                <input type="number" name="quantidade" value="1" min="1" max="{{ livro.estoque }}" class="w-16 p-2 border rounded-l-md">
+                                <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-r-md hover:bg-blue-700">Adicionar ao Carrinho</button>
+                            </form>
+                        {% else %}
+                            <p class="text-red-500 font-semibold">Produto esgotado</p>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p class="sem-livros">Nenhum livro disponível no momento.</p>
+    {% endif %}
+</div>
+{% endblock %}

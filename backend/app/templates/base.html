@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Biblioteca{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.3/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+    <!-- HEADER -->
+    <header class="bg-white shadow mb-8">
+        <nav class="container mx-auto p-4 flex justify-between items-center">
+            <!-- Menu principal -->
+            <div class="flex space-x-4">
+                <a href="/" class="text-blue-600 font-semibold hover:underline">Início</a>
+                <a href="/livros" class="text-blue-600 font-semibold hover:underline">Livros</a>
+                <a href="/carrinho" class="text-blue-600 font-semibold hover:underline">Carrinho</a>
+                {% if usuario_logado and usuario %}
+                    <a href="/pedidos" class="text-blue-600 font-semibold hover:underline">Meus Pedidos</a>
+                    <a href="/usuarios/perfil" class="text-blue-600 font-semibold hover:underline">Meu Perfil</a>
+                {% endif %}
+            </div>
+
+            <!-- Área de login/logout -->
+            <div class="flex space-x-4 items-center">
+                {% if usuario_logado and usuario %}
+                    <span class="text-gray-700">Olá, {{ usuario.nome or usuario.email.split('@')[0] }}!</span>
+                    <a href="/auth/logout" class="text-red-600 font-semibold hover:underline">Logout</a>
+                {% else %}
+                    <a href="/auth/login" class="text-blue-600 font-semibold hover:underline">Login</a>
+                    <a href="/auth/cadastro" class="text-blue-600 font-semibold hover:underline">Cadastrar</a>
+                {% endif %}
+            </div>
+        </nav>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="container mx-auto px-4">
+        {% if mensagem %}
+            <div class="mb-4 p-3 bg-red-100 text-red-700 rounded">
+                {{ mensagem }}
+            </div>
+        {% endif %}
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="text-center py-6 text-gray-600 mt-8">
+        &copy; 2025 - Biblioteca Online
+    </footer>
+
+</body>
+</html>
