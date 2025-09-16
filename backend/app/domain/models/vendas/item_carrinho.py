@@ -6,11 +6,10 @@ from app.database import Base
 
 class ItemCarrinho(Base):
     __tablename__ = "itens_carrinho"
-    __table_args__ = {"schema": "biblioteca"}
 
     id = Column(Integer, primary_key=True, index=True)
-    usuario_id = Column(Integer, ForeignKey("biblioteca.usuarios.id"), nullable=False)
-    livro_id = Column(Integer, ForeignKey("biblioteca.livros.id"), nullable=False)
+    usuario_id = Column(Integer, ForeignKey("usuarios.id"), nullable=False)
+    livro_id = Column(Integer, ForeignKey("livros.id"), nullable=False)
     quantidade = Column(Integer, default=1, nullable=False)
     created_at = Column(DateTime, default=datetime.utcnow)
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)

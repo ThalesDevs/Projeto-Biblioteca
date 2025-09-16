@@ -5,7 +5,6 @@ from app.database import Base
 
 class Livro(Base):
     __tablename__ = "livros"
-    __table_args__ = {"schema": "biblioteca"}
 
     id = Column(Integer, primary_key=True, index=True)
     titulo = Column(String, nullable=False)

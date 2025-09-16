@@ -5,7 +5,6 @@ from sqlalchemy.orm import relationship
 
 class Usuario(Base):
     __tablename__ = "usuarios"
-    __table_args__ = {"schema": "biblioteca"}
 
     id = Column(Integer, primary_key=True, index=True)
     nome = Column(String(100), nullable=False)

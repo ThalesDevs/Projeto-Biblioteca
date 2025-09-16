@@ -4,10 +4,9 @@ from app.database import Base
 
 class CartaoCredito(Base):
     __tablename__ = "cartoes_credito"
-    __table_args__ = {"schema": "biblioteca"}  # ajuste se for outro schema
 
     id = Column(Integer, primary_key=True, index=True)
-    usuario_id = Column(Integer, ForeignKey("biblioteca.usuarios.id", ondelete="CASCADE"), nullable=False)
+    usuario_id = Column(Integer, ForeignKey("usuarios.id", ondelete="CASCADE"), nullable=False)
 
     numero = Column(String(20), nullable=False)
     nome_titular = Column(String(255), nullable=False)

@@ -6,10 +6,9 @@ from app.database import Base
 
 class ConfirmacaoEmail(Base):
     __tablename__ = "confirmacoes_email"
-    __table_args__ = {"schema": "biblioteca"}
 
     id = Column(Integer, primary_key=True, index=True)
-    usuario_id = Column(Integer, ForeignKey("biblioteca.usuarios.id"), nullable=False)
+    usuario_id = Column(Integer, ForeignKey("usuarios.id"), nullable=False)
 
     token = Column(String(100), unique=True, nullable=False)
     tipo = Column(String(50), nullable=False)

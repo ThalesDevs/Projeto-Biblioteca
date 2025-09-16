@@ -63,11 +63,30 @@
         {% endif %}
     </div>
     {% else %}
-    <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-4">
-        <p>Você precisa estar logado para acessar seu perfil.</p>
-        <a href="/auth/login" class="text-blue-600 hover:underline">Fazer login</a>
+    <div class="text-center py-16 bg-blue-600 text-white">
+        <h1 class="text-5xl font-bold mb-4">Bem-vindo à Biblioteca Online</h1>
+        <p class="text-xl mb-8">Sua fonte de conhecimento e aventura.</p>
+        <a href="/livros" class="bg-white text-blue-600 font-semibold px-8 py-3 rounded-full hover:bg-gray-200">Ver Livros</a>
     </div>
     {% endif %}
 
+    <div class="py-16">
+        <h2 class="text-3xl font-bold text-center mb-12">Livros em Destaque</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {% for livro in livros_destaque %}
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    {% if livro.capa_url %}
+                        <img src="{{ livro.capa_url }}" alt="Capa do livro {{ livro.titulo }}" class="w-full h-64 object-cover">
+                    {% endif %}
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">{{ livro.titulo }}</h3>
+                        <p class="text-gray-600 mb-2"><strong>Autor:</strong> {{ livro.autor }}</p>
+                        <p class="text-lg font-bold text-green-600 mb-2">R$ {{ "%.2f"|format(livro.preco) }}</p>
+                        <a href="/livros/{{ livro.id }}" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">Ver Detalhes</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 </div>
 {% endblock %}

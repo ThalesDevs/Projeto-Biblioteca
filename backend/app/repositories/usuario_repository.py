@@ -17,13 +17,13 @@ class UsuarioRepository:
         """Busca usuário por ID"""
         return self.db.query(Usuario).filter(Usuario.id == usuario_id).first()
 
-    def criar_usuario(self, usuario_data: UsuarioCreate) -> Usuario:
+    def criar_usuario(self, usuario_data: UsuarioCreate, senha_hash: str, email_confirmado: bool = False) -> Usuario:
         """Cria novo usuário - CORRIGIDO para aceitar UsuarioCreate"""
         usuario = Usuario(
             nome=usuario_data.nome,
             email=usuario_data.email,
-            senha_hash=usuario_data.senha_hash,
-            email_confirmado=False,
+            senha_hash=senha_hash,
+            email_confirmado=email_confirmado,
             ativo=True
         )
 
