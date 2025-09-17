@@ -1,7 +1,6 @@
 # alembic/versions/0001_criacao_inicial.py
 from alembic import op
 import sqlalchemy as sa
-from sqlalchemy.dialects import postgresql
 
 # Revisão Alembic
 revision = '0001_criacao_inicial'

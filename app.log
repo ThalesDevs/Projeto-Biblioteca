@@ -23317,3 +23317,970 @@ AttributeError: 'NoneType' object has no attribute 'id'
 2025-09-04 12:59:40,101 - BibliotecaApp - INFO - GET /openapi.json → 200 (0.159s)
 2025-09-04 13:00:04,175 - BibliotecaApp - INFO - POST /auth/auth/token → 200 (0.687s)
 2025-09-04 13:00:58,752 - BibliotecaApp - INFO - GET /livros/buscar/filtros → 200 (0.023s)
+2025-09-16 19:52:58,758 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-16 19:52:58,761 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-16 19:53:02,825 - BibliotecaApp - ERROR - ❌ Erro ao criar tabelas: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-16 21:34:21,847 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-16 21:34:21,847 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-16 21:34:29,127 - BibliotecaApp - ERROR - ❌ Erro ao criar tabelas: 'utf-8' codec can't decode byte 0xe3 in position 58: invalid continuation byte
+2025-09-16 21:36:51,464 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-16 21:36:51,465 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-16 21:37:09,924 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-16 21:37:09,925 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-16 21:37:12,640 - BibliotecaApp - ERROR - ❌ Erro ao criar tabelas: 'utf-8' codec can't decode byte 0xe3 in position 58: invalid continuation byte
+2025-09-16 21:41:32,229 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-16 21:41:32,230 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-16 21:41:39,514 - BibliotecaApp - ERROR - ❌ Erro ao criar tabelas: 'utf-8' codec can't decode byte 0xe3 in position 58: invalid continuation byte
+2025-09-17 02:19:51,272 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-17 02:19:51,272 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-17 02:19:51,290 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-09-17 02:19:51,290 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-09-17 02:19:51,293 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-09-17 02:19:51,294 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-09-17 02:19:51,295 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-09-17 02:19:51,296 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-09-17 02:19:51,298 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-09-17 02:19:51,303 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 02:19:51,304 - sqlalchemy.engine.Engine - INFO - [generated in 0.00096s] {'table_name': 'usuarios', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 02:19:51,306 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 02:19:51,307 - sqlalchemy.engine.Engine - INFO - [cached since 0.00411s ago] {'table_name': 'endereco_usuarios', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 02:19:51,309 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 02:19:51,311 - sqlalchemy.engine.Engine - INFO - [cached since 0.007461s ago] {'table_name': 'cartoes_credito', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 02:19:51,312 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 02:19:51,313 - sqlalchemy.engine.Engine - INFO - [cached since 0.009739s ago] {'table_name': 'confirmacoes_email', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 02:19:51,315 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 02:19:51,315 - sqlalchemy.engine.Engine - INFO - [cached since 0.01203s ago] {'table_name': 'livros', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 02:19:51,316 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 02:19:51,317 - sqlalchemy.engine.Engine - INFO - [cached since 0.01401s ago] {'table_name': 'pedidos', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 02:19:51,318 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 02:19:51,319 - sqlalchemy.engine.Engine - INFO - [cached since 0.01567s ago] {'table_name': 'itens_carrinho', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 02:19:51,320 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 02:19:51,320 - sqlalchemy.engine.Engine - INFO - [cached since 0.0172s ago] {'table_name': 'itens_pedido', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 02:19:51,323 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = %(typname_1)s AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-09-17 02:19:51,323 - sqlalchemy.engine.Engine - INFO - [generated in 0.00067s] {'typname_1': 'statuspedido', 'nspname_1': 'pg_catalog'}
+2025-09-17 02:19:51,325 - sqlalchemy.engine.Engine - INFO - CREATE TYPE statuspedido AS ENUM ('PENDENTE', 'CONFIRMADO', 'ENVIADO', 'ENTREGUE', 'CANCELADO')
+2025-09-17 02:19:51,326 - sqlalchemy.engine.Engine - INFO - [no key 0.00047s] {}
+2025-09-17 02:19:51,328 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE biblioteca.usuarios (
+	id SERIAL NOT NULL, 
+	nome VARCHAR(100) NOT NULL, 
+	email VARCHAR(100) NOT NULL, 
+	senha_hash VARCHAR(255) NOT NULL, 
+	email_confirmado BOOLEAN, 
+	email_confirmado_em TIMESTAMP WITHOUT TIME ZONE, 
+	cpf VARCHAR(14), 
+	telefone VARCHAR(15), 
+	data_nascimento DATE, 
+	ativo BOOLEAN, 
+	is_admin BOOLEAN NOT NULL, 
+	created_at TIMESTAMP WITHOUT TIME ZONE, 
+	updated_at TIMESTAMP WITHOUT TIME ZONE, 
+	PRIMARY KEY (id), 
+	UNIQUE (cpf)
+)
+
+
+2025-09-17 02:19:51,330 - sqlalchemy.engine.Engine - INFO - [no key 0.00108s] {}
+2025-09-17 02:19:51,332 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-09-17 02:19:51,334 - BibliotecaApp - ERROR - ❌ Erro ao criar tabelas: (psycopg2.errors.InvalidSchemaName) schema "biblioteca" does not exist
+LINE 2: CREATE TABLE biblioteca.usuarios (
+                     ^
+
+[SQL: 
+CREATE TABLE biblioteca.usuarios (
+	id SERIAL NOT NULL, 
+	nome VARCHAR(100) NOT NULL, 
+	email VARCHAR(100) NOT NULL, 
+	senha_hash VARCHAR(255) NOT NULL, 
+	email_confirmado BOOLEAN, 
+	email_confirmado_em TIMESTAMP WITHOUT TIME ZONE, 
+	cpf VARCHAR(14), 
+	telefone VARCHAR(15), 
+	data_nascimento DATE, 
+	ativo BOOLEAN, 
+	is_admin BOOLEAN NOT NULL, 
+	created_at TIMESTAMP WITHOUT TIME ZONE, 
+	updated_at TIMESTAMP WITHOUT TIME ZONE, 
+	PRIMARY KEY (id), 
+	UNIQUE (cpf)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-09-17 02:22:16,159 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-17 02:22:16,161 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-17 02:22:16,173 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-09-17 02:22:16,173 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-09-17 02:22:16,175 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-09-17 02:22:16,181 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-09-17 02:22:16,182 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-09-17 02:22:16,182 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-09-17 02:22:16,183 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-09-17 02:22:16,186 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 02:22:16,186 - sqlalchemy.engine.Engine - INFO - [generated in 0.00055s] {'table_name': 'usuarios', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 02:22:16,188 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 02:22:16,188 - sqlalchemy.engine.Engine - INFO - [cached since 0.002958s ago] {'table_name': 'endereco_usuarios', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 02:22:16,190 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 02:22:16,190 - sqlalchemy.engine.Engine - INFO - [cached since 0.00458s ago] {'table_name': 'cartoes_credito', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 02:22:16,191 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 02:22:16,192 - sqlalchemy.engine.Engine - INFO - [cached since 0.006147s ago] {'table_name': 'confirmacoes_email', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 02:22:16,192 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 02:22:16,193 - sqlalchemy.engine.Engine - INFO - [cached since 0.00724s ago] {'table_name': 'livros', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 02:22:16,193 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 02:22:16,194 - sqlalchemy.engine.Engine - INFO - [cached since 0.008282s ago] {'table_name': 'pedidos', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 02:22:16,194 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 02:22:16,195 - sqlalchemy.engine.Engine - INFO - [cached since 0.009211s ago] {'table_name': 'itens_carrinho', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 02:22:16,195 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 02:22:16,196 - sqlalchemy.engine.Engine - INFO - [cached since 0.01028s ago] {'table_name': 'itens_pedido', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 02:22:16,198 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = %(typname_1)s AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-09-17 02:22:16,198 - sqlalchemy.engine.Engine - INFO - [generated in 0.00047s] {'typname_1': 'statuspedido', 'nspname_1': 'pg_catalog'}
+2025-09-17 02:22:16,199 - sqlalchemy.engine.Engine - INFO - CREATE TYPE statuspedido AS ENUM ('PENDENTE', 'CONFIRMADO', 'ENVIADO', 'ENTREGUE', 'CANCELADO')
+2025-09-17 02:22:16,199 - sqlalchemy.engine.Engine - INFO - [no key 0.00034s] {}
+2025-09-17 02:22:16,201 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE biblioteca.usuarios (
+	id SERIAL NOT NULL, 
+	nome VARCHAR(100) NOT NULL, 
+	email VARCHAR(100) NOT NULL, 
+	senha_hash VARCHAR(255) NOT NULL, 
+	email_confirmado BOOLEAN, 
+	email_confirmado_em TIMESTAMP WITHOUT TIME ZONE, 
+	cpf VARCHAR(14), 
+	telefone VARCHAR(15), 
+	data_nascimento DATE, 
+	ativo BOOLEAN, 
+	is_admin BOOLEAN NOT NULL, 
+	created_at TIMESTAMP WITHOUT TIME ZONE, 
+	updated_at TIMESTAMP WITHOUT TIME ZONE, 
+	PRIMARY KEY (id), 
+	UNIQUE (cpf)
+)
+
+
+2025-09-17 02:22:16,201 - sqlalchemy.engine.Engine - INFO - [no key 0.00041s] {}
+2025-09-17 02:22:16,202 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-09-17 02:22:16,202 - BibliotecaApp - ERROR - ❌ Erro ao criar tabelas: (psycopg2.errors.InvalidSchemaName) schema "biblioteca" does not exist
+LINE 2: CREATE TABLE biblioteca.usuarios (
+                     ^
+
+[SQL: 
+CREATE TABLE biblioteca.usuarios (
+	id SERIAL NOT NULL, 
+	nome VARCHAR(100) NOT NULL, 
+	email VARCHAR(100) NOT NULL, 
+	senha_hash VARCHAR(255) NOT NULL, 
+	email_confirmado BOOLEAN, 
+	email_confirmado_em TIMESTAMP WITHOUT TIME ZONE, 
+	cpf VARCHAR(14), 
+	telefone VARCHAR(15), 
+	data_nascimento DATE, 
+	ativo BOOLEAN, 
+	is_admin BOOLEAN NOT NULL, 
+	created_at TIMESTAMP WITHOUT TIME ZONE, 
+	updated_at TIMESTAMP WITHOUT TIME ZONE, 
+	PRIMARY KEY (id), 
+	UNIQUE (cpf)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-09-17 02:27:23,747 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-17 02:27:23,747 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-17 02:27:23,761 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-09-17 02:27:23,761 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-09-17 02:27:23,763 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-09-17 02:27:23,763 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-09-17 02:27:23,764 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-09-17 02:27:23,765 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-09-17 02:27:23,766 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-09-17 02:27:23,768 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 02:27:23,769 - sqlalchemy.engine.Engine - INFO - [generated in 0.00069s] {'table_name': 'usuarios', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 02:27:23,771 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 02:27:23,771 - sqlalchemy.engine.Engine - INFO - [cached since 0.002871s ago] {'table_name': 'endereco_usuarios', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 02:27:23,772 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 02:27:23,772 - sqlalchemy.engine.Engine - INFO - [cached since 0.004167s ago] {'table_name': 'cartoes_credito', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 02:27:23,773 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 02:27:23,774 - sqlalchemy.engine.Engine - INFO - [cached since 0.005321s ago] {'table_name': 'confirmacoes_email', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 02:27:23,775 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 02:27:23,775 - sqlalchemy.engine.Engine - INFO - [cached since 0.006762s ago] {'table_name': 'livros', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 02:27:23,776 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 02:27:23,776 - sqlalchemy.engine.Engine - INFO - [cached since 0.007822s ago] {'table_name': 'pedidos', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 02:27:23,777 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 02:27:23,777 - sqlalchemy.engine.Engine - INFO - [cached since 0.00896s ago] {'table_name': 'itens_carrinho', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 02:27:23,778 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 02:27:23,778 - sqlalchemy.engine.Engine - INFO - [cached since 0.01001s ago] {'table_name': 'itens_pedido', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 02:27:23,780 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = %(typname_1)s AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-09-17 02:27:23,781 - sqlalchemy.engine.Engine - INFO - [generated in 0.00040s] {'typname_1': 'statuspedido', 'nspname_1': 'pg_catalog'}
+2025-09-17 02:27:23,782 - sqlalchemy.engine.Engine - INFO - CREATE TYPE statuspedido AS ENUM ('PENDENTE', 'CONFIRMADO', 'ENVIADO', 'ENTREGUE', 'CANCELADO')
+2025-09-17 02:27:23,783 - sqlalchemy.engine.Engine - INFO - [no key 0.00047s] {}
+2025-09-17 02:27:23,785 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE biblioteca.usuarios (
+	id SERIAL NOT NULL, 
+	nome VARCHAR(100) NOT NULL, 
+	email VARCHAR(100) NOT NULL, 
+	senha_hash VARCHAR(255) NOT NULL, 
+	email_confirmado BOOLEAN, 
+	email_confirmado_em TIMESTAMP WITHOUT TIME ZONE, 
+	cpf VARCHAR(14), 
+	telefone VARCHAR(15), 
+	data_nascimento DATE, 
+	ativo BOOLEAN, 
+	is_admin BOOLEAN NOT NULL, 
+	created_at TIMESTAMP WITHOUT TIME ZONE, 
+	updated_at TIMESTAMP WITHOUT TIME ZONE, 
+	PRIMARY KEY (id), 
+	UNIQUE (cpf)
+)
+
+
+2025-09-17 02:27:23,786 - sqlalchemy.engine.Engine - INFO - [no key 0.00107s] {}
+2025-09-17 02:27:23,798 - sqlalchemy.engine.Engine - INFO - CREATE INDEX ix_biblioteca_usuarios_id ON biblioteca.usuarios (id)
+2025-09-17 02:27:23,799 - sqlalchemy.engine.Engine - INFO - [no key 0.00085s] {}
+2025-09-17 02:27:23,800 - sqlalchemy.engine.Engine - INFO - CREATE UNIQUE INDEX ix_biblioteca_usuarios_email ON biblioteca.usuarios (email)
+2025-09-17 02:27:23,800 - sqlalchemy.engine.Engine - INFO - [no key 0.00038s] {}
+2025-09-17 02:27:23,801 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE biblioteca.livros (
+	id SERIAL NOT NULL, 
+	titulo VARCHAR NOT NULL, 
+	autor VARCHAR NOT NULL, 
+	ano INTEGER, 
+	preco NUMERIC, 
+	estoque INTEGER, 
+	capa_url VARCHAR, 
+	data_criacao TIMESTAMP WITHOUT TIME ZONE, 
+	data_atualizacao TIMESTAMP WITHOUT TIME ZONE, 
+	isbn VARCHAR, 
+	slug VARCHAR, 
+	PRIMARY KEY (id)
+)
+
+
+2025-09-17 02:27:23,802 - sqlalchemy.engine.Engine - INFO - [no key 0.00050s] {}
+2025-09-17 02:27:23,804 - sqlalchemy.engine.Engine - INFO - CREATE INDEX ix_biblioteca_livros_id ON biblioteca.livros (id)
+2025-09-17 02:27:23,804 - sqlalchemy.engine.Engine - INFO - [no key 0.00053s] {}
+2025-09-17 02:27:23,805 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE biblioteca.endereco_usuarios (
+	id SERIAL NOT NULL, 
+	usuario_id INTEGER NOT NULL, 
+	rua VARCHAR(255) NOT NULL, 
+	numero VARCHAR(50), 
+	cidade VARCHAR(100) NOT NULL, 
+	estado VARCHAR(100) NOT NULL, 
+	cep VARCHAR(20) NOT NULL, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(usuario_id) REFERENCES biblioteca.usuarios (id) ON DELETE CASCADE
+)
+
+
+2025-09-17 02:27:23,806 - sqlalchemy.engine.Engine - INFO - [no key 0.00051s] {}
+2025-09-17 02:27:23,809 - sqlalchemy.engine.Engine - INFO - CREATE INDEX ix_biblioteca_endereco_usuarios_id ON biblioteca.endereco_usuarios (id)
+2025-09-17 02:27:23,810 - sqlalchemy.engine.Engine - INFO - [no key 0.00043s] {}
+2025-09-17 02:27:23,811 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE biblioteca.cartoes_credito (
+	id SERIAL NOT NULL, 
+	usuario_id INTEGER NOT NULL, 
+	numero VARCHAR(20) NOT NULL, 
+	nome_titular VARCHAR(255) NOT NULL, 
+	validade VARCHAR(7) NOT NULL, 
+	cvv VARCHAR(4) NOT NULL, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(usuario_id) REFERENCES biblioteca.usuarios (id) ON DELETE CASCADE
+)
+
+
+2025-09-17 02:27:23,811 - sqlalchemy.engine.Engine - INFO - [no key 0.00040s] {}
+2025-09-17 02:27:23,813 - sqlalchemy.engine.Engine - INFO - CREATE INDEX ix_biblioteca_cartoes_credito_id ON biblioteca.cartoes_credito (id)
+2025-09-17 02:27:23,813 - sqlalchemy.engine.Engine - INFO - [no key 0.00047s] {}
+2025-09-17 02:27:23,815 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE biblioteca.confirmacoes_email (
+	id SERIAL NOT NULL, 
+	usuario_id INTEGER NOT NULL, 
+	token VARCHAR(100) NOT NULL, 
+	tipo VARCHAR(50) NOT NULL, 
+	novo_email VARCHAR(100), 
+	usado BOOLEAN, 
+	expires_at TIMESTAMP WITHOUT TIME ZONE NOT NULL, 
+	created_at TIMESTAMP WITHOUT TIME ZONE, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(usuario_id) REFERENCES biblioteca.usuarios (id), 
+	UNIQUE (token)
+)
+
+
+2025-09-17 02:27:23,815 - sqlalchemy.engine.Engine - INFO - [no key 0.00060s] {}
+2025-09-17 02:27:23,817 - sqlalchemy.engine.Engine - INFO - CREATE INDEX ix_biblioteca_confirmacoes_email_id ON biblioteca.confirmacoes_email (id)
+2025-09-17 02:27:23,817 - sqlalchemy.engine.Engine - INFO - [no key 0.00044s] {}
+2025-09-17 02:27:23,818 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE biblioteca.pedidos (
+	id SERIAL NOT NULL, 
+	usuario_id INTEGER NOT NULL, 
+	status statuspedido, 
+	created_at TIMESTAMP WITHOUT TIME ZONE, 
+	updated_at TIMESTAMP WITHOUT TIME ZONE, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(usuario_id) REFERENCES biblioteca.usuarios (id)
+)
+
+
+2025-09-17 02:27:23,819 - sqlalchemy.engine.Engine - INFO - [no key 0.00042s] {}
+2025-09-17 02:27:23,821 - sqlalchemy.engine.Engine - INFO - CREATE INDEX ix_biblioteca_pedidos_id ON biblioteca.pedidos (id)
+2025-09-17 02:27:23,821 - sqlalchemy.engine.Engine - INFO - [no key 0.00046s] {}
+2025-09-17 02:27:23,822 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE biblioteca.itens_carrinho (
+	id SERIAL NOT NULL, 
+	usuario_id INTEGER NOT NULL, 
+	livro_id INTEGER NOT NULL, 
+	quantidade INTEGER NOT NULL, 
+	created_at TIMESTAMP WITHOUT TIME ZONE, 
+	updated_at TIMESTAMP WITHOUT TIME ZONE, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(usuario_id) REFERENCES biblioteca.usuarios (id), 
+	FOREIGN KEY(livro_id) REFERENCES biblioteca.livros (id)
+)
+
+
+2025-09-17 02:27:23,823 - sqlalchemy.engine.Engine - INFO - [no key 0.00057s] {}
+2025-09-17 02:27:23,824 - sqlalchemy.engine.Engine - INFO - CREATE INDEX ix_biblioteca_itens_carrinho_id ON biblioteca.itens_carrinho (id)
+2025-09-17 02:27:23,824 - sqlalchemy.engine.Engine - INFO - [no key 0.00041s] {}
+2025-09-17 02:27:23,826 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE biblioteca.itens_pedido (
+	id SERIAL NOT NULL, 
+	pedido_id INTEGER NOT NULL, 
+	livro_id INTEGER NOT NULL, 
+	quantidade INTEGER NOT NULL, 
+	preco_unitario NUMERIC(10, 2) NOT NULL, 
+	created_at TIMESTAMP WITHOUT TIME ZONE, 
+	updated_at TIMESTAMP WITHOUT TIME ZONE, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(pedido_id) REFERENCES biblioteca.pedidos (id), 
+	FOREIGN KEY(livro_id) REFERENCES biblioteca.livros (id)
+)
+
+
+2025-09-17 02:27:23,827 - sqlalchemy.engine.Engine - INFO - [no key 0.00063s] {}
+2025-09-17 02:27:23,828 - sqlalchemy.engine.Engine - INFO - CREATE INDEX ix_biblioteca_itens_pedido_id ON biblioteca.itens_pedido (id)
+2025-09-17 02:27:23,829 - sqlalchemy.engine.Engine - INFO - [no key 0.00116s] {}
+2025-09-17 02:27:23,830 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-09-17 02:27:23,833 - BibliotecaApp - INFO - ✅ Tabelas criadas/verificadas com sucesso
+2025-09-17 02:48:03,153 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-17 02:48:03,154 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-17 02:48:03,164 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-09-17 02:48:03,164 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-09-17 02:48:03,165 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-09-17 02:48:03,166 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-09-17 02:48:03,166 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-09-17 02:48:03,167 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-09-17 02:48:03,168 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-09-17 02:48:03,170 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 02:48:03,171 - sqlalchemy.engine.Engine - INFO - [generated in 0.00046s] {'table_name': 'usuarios', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 02:48:03,173 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 02:48:03,174 - sqlalchemy.engine.Engine - INFO - [cached since 0.003568s ago] {'table_name': 'endereco_usuarios', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 02:48:03,175 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 02:48:03,175 - sqlalchemy.engine.Engine - INFO - [cached since 0.004947s ago] {'table_name': 'cartoes_credito', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 02:48:03,176 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 02:48:03,176 - sqlalchemy.engine.Engine - INFO - [cached since 0.00612s ago] {'table_name': 'confirmacoes_email', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 02:48:03,177 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 02:48:03,177 - sqlalchemy.engine.Engine - INFO - [cached since 0.007157s ago] {'table_name': 'livros', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 02:48:03,178 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 02:48:03,178 - sqlalchemy.engine.Engine - INFO - [cached since 0.008138s ago] {'table_name': 'pedidos', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 02:48:03,179 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 02:48:03,179 - sqlalchemy.engine.Engine - INFO - [cached since 0.009264s ago] {'table_name': 'itens_carrinho', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 02:48:03,180 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 02:48:03,181 - sqlalchemy.engine.Engine - INFO - [cached since 0.01107s ago] {'table_name': 'itens_pedido', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 02:48:03,183 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = %(typname_1)s AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-09-17 02:48:03,184 - sqlalchemy.engine.Engine - INFO - [generated in 0.00046s] {'typname_1': 'statuspedido', 'nspname_1': 'pg_catalog'}
+2025-09-17 02:48:03,185 - sqlalchemy.engine.Engine - INFO - CREATE TYPE statuspedido AS ENUM ('PENDENTE', 'CONFIRMADO', 'ENVIADO', 'ENTREGUE', 'CANCELADO')
+2025-09-17 02:48:03,185 - sqlalchemy.engine.Engine - INFO - [no key 0.00036s] {}
+2025-09-17 02:48:03,188 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE biblioteca.usuarios (
+	id SERIAL NOT NULL, 
+	nome VARCHAR(100) NOT NULL, 
+	email VARCHAR(100) NOT NULL, 
+	senha_hash VARCHAR(255) NOT NULL, 
+	email_confirmado BOOLEAN, 
+	email_confirmado_em TIMESTAMP WITHOUT TIME ZONE, 
+	cpf VARCHAR(14), 
+	telefone VARCHAR(15), 
+	data_nascimento DATE, 
+	ativo BOOLEAN, 
+	is_admin BOOLEAN NOT NULL, 
+	created_at TIMESTAMP WITHOUT TIME ZONE, 
+	updated_at TIMESTAMP WITHOUT TIME ZONE, 
+	PRIMARY KEY (id), 
+	UNIQUE (cpf)
+)
+
+
+2025-09-17 02:48:03,188 - sqlalchemy.engine.Engine - INFO - [no key 0.00051s] {}
+2025-09-17 02:48:03,189 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-09-17 02:48:03,190 - BibliotecaApp - ERROR - ❌ Erro ao criar tabelas: (psycopg2.errors.InvalidSchemaName) schema "biblioteca" does not exist
+LINE 2: CREATE TABLE biblioteca.usuarios (
+                     ^
+
+[SQL: 
+CREATE TABLE biblioteca.usuarios (
+	id SERIAL NOT NULL, 
+	nome VARCHAR(100) NOT NULL, 
+	email VARCHAR(100) NOT NULL, 
+	senha_hash VARCHAR(255) NOT NULL, 
+	email_confirmado BOOLEAN, 
+	email_confirmado_em TIMESTAMP WITHOUT TIME ZONE, 
+	cpf VARCHAR(14), 
+	telefone VARCHAR(15), 
+	data_nascimento DATE, 
+	ativo BOOLEAN, 
+	is_admin BOOLEAN NOT NULL, 
+	created_at TIMESTAMP WITHOUT TIME ZONE, 
+	updated_at TIMESTAMP WITHOUT TIME ZONE, 
+	PRIMARY KEY (id), 
+	UNIQUE (cpf)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-09-17 03:02:16,575 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-17 03:02:16,576 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-17 03:02:16,605 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-09-17 03:02:16,606 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-09-17 03:02:16,607 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-09-17 03:02:16,607 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-09-17 03:02:16,608 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-09-17 03:02:16,609 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-09-17 03:02:16,610 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-09-17 03:02:16,613 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:02:16,613 - sqlalchemy.engine.Engine - INFO - [generated in 0.00060s] {'table_name': 'usuarios', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:02:16,615 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:02:16,616 - sqlalchemy.engine.Engine - INFO - [cached since 0.00283s ago] {'table_name': 'endereco_usuarios', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:02:16,617 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:02:16,617 - sqlalchemy.engine.Engine - INFO - [cached since 0.004404s ago] {'table_name': 'cartoes_credito', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:02:16,618 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:02:16,619 - sqlalchemy.engine.Engine - INFO - [cached since 0.005905s ago] {'table_name': 'confirmacoes_email', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:02:16,620 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:02:16,620 - sqlalchemy.engine.Engine - INFO - [cached since 0.007164s ago] {'table_name': 'livros', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:02:16,621 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:02:16,621 - sqlalchemy.engine.Engine - INFO - [cached since 0.00857s ago] {'table_name': 'pedidos', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:02:16,622 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:02:16,623 - sqlalchemy.engine.Engine - INFO - [cached since 0.01003s ago] {'table_name': 'itens_carrinho', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:02:16,624 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:02:16,624 - sqlalchemy.engine.Engine - INFO - [cached since 0.01146s ago] {'table_name': 'itens_pedido', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:02:16,626 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = %(typname_1)s AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-09-17 03:02:16,627 - sqlalchemy.engine.Engine - INFO - [generated in 0.00042s] {'typname_1': 'statuspedido', 'nspname_1': 'pg_catalog'}
+2025-09-17 03:02:16,628 - sqlalchemy.engine.Engine - INFO - CREATE TYPE statuspedido AS ENUM ('PENDENTE', 'CONFIRMADO', 'ENVIADO', 'ENTREGUE', 'CANCELADO')
+2025-09-17 03:02:16,628 - sqlalchemy.engine.Engine - INFO - [no key 0.00031s] {}
+2025-09-17 03:02:16,631 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE biblioteca.usuarios (
+	id SERIAL NOT NULL, 
+	nome VARCHAR(100) NOT NULL, 
+	email VARCHAR(100) NOT NULL, 
+	senha_hash VARCHAR(255) NOT NULL, 
+	email_confirmado BOOLEAN, 
+	email_confirmado_em TIMESTAMP WITHOUT TIME ZONE, 
+	cpf VARCHAR(14), 
+	telefone VARCHAR(15), 
+	data_nascimento DATE, 
+	ativo BOOLEAN, 
+	is_admin BOOLEAN NOT NULL, 
+	created_at TIMESTAMP WITHOUT TIME ZONE, 
+	updated_at TIMESTAMP WITHOUT TIME ZONE, 
+	PRIMARY KEY (id), 
+	UNIQUE (cpf)
+)
+
+
+2025-09-17 03:02:16,631 - sqlalchemy.engine.Engine - INFO - [no key 0.00044s] {}
+2025-09-17 03:02:16,633 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-09-17 03:02:16,633 - BibliotecaApp - ERROR - ❌ Erro ao criar tabelas: (psycopg2.errors.InvalidSchemaName) schema "biblioteca" does not exist
+LINE 2: CREATE TABLE biblioteca.usuarios (
+                     ^
+
+[SQL: 
+CREATE TABLE biblioteca.usuarios (
+	id SERIAL NOT NULL, 
+	nome VARCHAR(100) NOT NULL, 
+	email VARCHAR(100) NOT NULL, 
+	senha_hash VARCHAR(255) NOT NULL, 
+	email_confirmado BOOLEAN, 
+	email_confirmado_em TIMESTAMP WITHOUT TIME ZONE, 
+	cpf VARCHAR(14), 
+	telefone VARCHAR(15), 
+	data_nascimento DATE, 
+	ativo BOOLEAN, 
+	is_admin BOOLEAN NOT NULL, 
+	created_at TIMESTAMP WITHOUT TIME ZONE, 
+	updated_at TIMESTAMP WITHOUT TIME ZONE, 
+	PRIMARY KEY (id), 
+	UNIQUE (cpf)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-09-17 03:02:27,747 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-17 03:02:27,748 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-17 03:02:27,759 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-09-17 03:02:27,759 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-09-17 03:02:27,760 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-09-17 03:02:27,761 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-09-17 03:02:27,761 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-09-17 03:02:27,762 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-09-17 03:02:27,762 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-09-17 03:02:27,765 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:02:27,765 - sqlalchemy.engine.Engine - INFO - [generated in 0.00046s] {'table_name': 'usuarios', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:02:27,766 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:02:27,767 - sqlalchemy.engine.Engine - INFO - [cached since 0.002288s ago] {'table_name': 'endereco_usuarios', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:02:27,768 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:02:27,768 - sqlalchemy.engine.Engine - INFO - [cached since 0.003504s ago] {'table_name': 'cartoes_credito', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:02:27,769 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:02:27,769 - sqlalchemy.engine.Engine - INFO - [cached since 0.004519s ago] {'table_name': 'confirmacoes_email', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:02:27,770 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:02:27,770 - sqlalchemy.engine.Engine - INFO - [cached since 0.005418s ago] {'table_name': 'livros', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:02:27,770 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:02:27,771 - sqlalchemy.engine.Engine - INFO - [cached since 0.006395s ago] {'table_name': 'pedidos', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:02:27,772 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:02:27,772 - sqlalchemy.engine.Engine - INFO - [cached since 0.007327s ago] {'table_name': 'itens_carrinho', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:02:27,772 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:02:27,773 - sqlalchemy.engine.Engine - INFO - [cached since 0.008304s ago] {'table_name': 'itens_pedido', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:02:27,775 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = %(typname_1)s AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-09-17 03:02:27,775 - sqlalchemy.engine.Engine - INFO - [generated in 0.00045s] {'typname_1': 'statuspedido', 'nspname_1': 'pg_catalog'}
+2025-09-17 03:02:27,776 - sqlalchemy.engine.Engine - INFO - CREATE TYPE statuspedido AS ENUM ('PENDENTE', 'CONFIRMADO', 'ENVIADO', 'ENTREGUE', 'CANCELADO')
+2025-09-17 03:02:27,776 - sqlalchemy.engine.Engine - INFO - [no key 0.00032s] {}
+2025-09-17 03:02:27,778 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE biblioteca.usuarios (
+	id SERIAL NOT NULL, 
+	nome VARCHAR(100) NOT NULL, 
+	email VARCHAR(100) NOT NULL, 
+	senha_hash VARCHAR(255) NOT NULL, 
+	email_confirmado BOOLEAN, 
+	email_confirmado_em TIMESTAMP WITHOUT TIME ZONE, 
+	cpf VARCHAR(14), 
+	telefone VARCHAR(15), 
+	data_nascimento DATE, 
+	ativo BOOLEAN, 
+	is_admin BOOLEAN NOT NULL, 
+	created_at TIMESTAMP WITHOUT TIME ZONE, 
+	updated_at TIMESTAMP WITHOUT TIME ZONE, 
+	PRIMARY KEY (id), 
+	UNIQUE (cpf)
+)
+
+
+2025-09-17 03:02:27,778 - sqlalchemy.engine.Engine - INFO - [no key 0.00040s] {}
+2025-09-17 03:02:27,779 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-09-17 03:02:27,779 - BibliotecaApp - ERROR - ❌ Erro ao criar tabelas: (psycopg2.errors.InvalidSchemaName) schema "biblioteca" does not exist
+LINE 2: CREATE TABLE biblioteca.usuarios (
+                     ^
+
+[SQL: 
+CREATE TABLE biblioteca.usuarios (
+	id SERIAL NOT NULL, 
+	nome VARCHAR(100) NOT NULL, 
+	email VARCHAR(100) NOT NULL, 
+	senha_hash VARCHAR(255) NOT NULL, 
+	email_confirmado BOOLEAN, 
+	email_confirmado_em TIMESTAMP WITHOUT TIME ZONE, 
+	cpf VARCHAR(14), 
+	telefone VARCHAR(15), 
+	data_nascimento DATE, 
+	ativo BOOLEAN, 
+	is_admin BOOLEAN NOT NULL, 
+	created_at TIMESTAMP WITHOUT TIME ZONE, 
+	updated_at TIMESTAMP WITHOUT TIME ZONE, 
+	PRIMARY KEY (id), 
+	UNIQUE (cpf)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-09-17 03:08:15,794 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-17 03:08:15,794 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-17 03:08:15,814 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-09-17 03:08:15,814 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-09-17 03:08:15,816 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-09-17 03:08:15,816 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-09-17 03:08:15,817 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-09-17 03:08:15,817 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-09-17 03:08:15,818 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-09-17 03:08:15,820 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:08:15,821 - sqlalchemy.engine.Engine - INFO - [generated in 0.00046s] {'table_name': 'usuarios', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:08:15,822 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:08:15,823 - sqlalchemy.engine.Engine - INFO - [cached since 0.002925s ago] {'table_name': 'endereco_usuarios', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:08:15,824 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:08:15,824 - sqlalchemy.engine.Engine - INFO - [cached since 0.004108s ago] {'table_name': 'cartoes_credito', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:08:15,825 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:08:15,826 - sqlalchemy.engine.Engine - INFO - [cached since 0.005525s ago] {'table_name': 'confirmacoes_email', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:08:15,826 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:08:15,827 - sqlalchemy.engine.Engine - INFO - [cached since 0.006456s ago] {'table_name': 'livros', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:08:15,827 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:08:15,827 - sqlalchemy.engine.Engine - INFO - [cached since 0.007345s ago] {'table_name': 'pedidos', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:08:15,828 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:08:15,829 - sqlalchemy.engine.Engine - INFO - [cached since 0.008421s ago] {'table_name': 'itens_carrinho', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:08:15,829 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:08:15,830 - sqlalchemy.engine.Engine - INFO - [cached since 0.009798s ago] {'table_name': 'itens_pedido', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:08:15,832 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = %(typname_1)s AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-09-17 03:08:15,832 - sqlalchemy.engine.Engine - INFO - [generated in 0.00055s] {'typname_1': 'statuspedido', 'nspname_1': 'pg_catalog'}
+2025-09-17 03:08:15,834 - sqlalchemy.engine.Engine - INFO - CREATE TYPE statuspedido AS ENUM ('PENDENTE', 'CONFIRMADO', 'ENVIADO', 'ENTREGUE', 'CANCELADO')
+2025-09-17 03:08:15,834 - sqlalchemy.engine.Engine - INFO - [no key 0.00038s] {}
+2025-09-17 03:08:15,836 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE biblioteca.usuarios (
+	id SERIAL NOT NULL, 
+	nome VARCHAR(100) NOT NULL, 
+	email VARCHAR(100) NOT NULL, 
+	senha_hash VARCHAR(255) NOT NULL, 
+	email_confirmado BOOLEAN, 
+	email_confirmado_em TIMESTAMP WITHOUT TIME ZONE, 
+	cpf VARCHAR(14), 
+	telefone VARCHAR(15), 
+	data_nascimento DATE, 
+	ativo BOOLEAN, 
+	is_admin BOOLEAN NOT NULL, 
+	created_at TIMESTAMP WITHOUT TIME ZONE, 
+	updated_at TIMESTAMP WITHOUT TIME ZONE, 
+	PRIMARY KEY (id), 
+	UNIQUE (cpf)
+)
+
+
+2025-09-17 03:08:15,836 - sqlalchemy.engine.Engine - INFO - [no key 0.00052s] {}
+2025-09-17 03:08:15,838 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-09-17 03:08:15,838 - BibliotecaApp - ERROR - ❌ Erro ao criar tabelas: (psycopg2.errors.InvalidSchemaName) schema "biblioteca" does not exist
+LINE 2: CREATE TABLE biblioteca.usuarios (
+                     ^
+
+[SQL: 
+CREATE TABLE biblioteca.usuarios (
+	id SERIAL NOT NULL, 
+	nome VARCHAR(100) NOT NULL, 
+	email VARCHAR(100) NOT NULL, 
+	senha_hash VARCHAR(255) NOT NULL, 
+	email_confirmado BOOLEAN, 
+	email_confirmado_em TIMESTAMP WITHOUT TIME ZONE, 
+	cpf VARCHAR(14), 
+	telefone VARCHAR(15), 
+	data_nascimento DATE, 
+	ativo BOOLEAN, 
+	is_admin BOOLEAN NOT NULL, 
+	created_at TIMESTAMP WITHOUT TIME ZONE, 
+	updated_at TIMESTAMP WITHOUT TIME ZONE, 
+	PRIMARY KEY (id), 
+	UNIQUE (cpf)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-09-17 03:10:39,940 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-17 03:10:39,940 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-17 03:10:39,985 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-09-17 03:10:39,985 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-09-17 03:10:39,987 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-09-17 03:10:39,988 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-09-17 03:10:39,989 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-09-17 03:10:39,989 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-09-17 03:10:39,990 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-09-17 03:10:39,993 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:10:39,994 - sqlalchemy.engine.Engine - INFO - [generated in 0.00103s] {'table_name': 'usuarios', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:10:39,996 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:10:39,997 - sqlalchemy.engine.Engine - INFO - [cached since 0.003491s ago] {'table_name': 'endereco_usuarios', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:10:39,997 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:10:39,998 - sqlalchemy.engine.Engine - INFO - [cached since 0.004817s ago] {'table_name': 'cartoes_credito', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:10:39,999 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:10:39,999 - sqlalchemy.engine.Engine - INFO - [cached since 0.006133s ago] {'table_name': 'confirmacoes_email', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:10:40,000 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:10:40,001 - sqlalchemy.engine.Engine - INFO - [cached since 0.007739s ago] {'table_name': 'livros', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:10:40,002 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:10:40,002 - sqlalchemy.engine.Engine - INFO - [cached since 0.009205s ago] {'table_name': 'pedidos', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:10:40,003 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:10:40,004 - sqlalchemy.engine.Engine - INFO - [cached since 0.01067s ago] {'table_name': 'itens_carrinho', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:10:40,005 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:10:40,005 - sqlalchemy.engine.Engine - INFO - [cached since 0.01202s ago] {'table_name': 'itens_pedido', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:10:40,008 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = %(typname_1)s AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-09-17 03:10:40,008 - sqlalchemy.engine.Engine - INFO - [generated in 0.00050s] {'typname_1': 'statuspedido', 'nspname_1': 'pg_catalog'}
+2025-09-17 03:10:40,010 - sqlalchemy.engine.Engine - INFO - CREATE TYPE statuspedido AS ENUM ('PENDENTE', 'CONFIRMADO', 'ENVIADO', 'ENTREGUE', 'CANCELADO')
+2025-09-17 03:10:40,010 - sqlalchemy.engine.Engine - INFO - [no key 0.00034s] {}
+2025-09-17 03:10:40,013 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE biblioteca.usuarios (
+	id SERIAL NOT NULL, 
+	nome VARCHAR(100) NOT NULL, 
+	email VARCHAR(100) NOT NULL, 
+	senha_hash VARCHAR(255) NOT NULL, 
+	email_confirmado BOOLEAN, 
+	email_confirmado_em TIMESTAMP WITHOUT TIME ZONE, 
+	cpf VARCHAR(14), 
+	telefone VARCHAR(15), 
+	data_nascimento DATE, 
+	ativo BOOLEAN, 
+	is_admin BOOLEAN NOT NULL, 
+	created_at TIMESTAMP WITHOUT TIME ZONE, 
+	updated_at TIMESTAMP WITHOUT TIME ZONE, 
+	PRIMARY KEY (id), 
+	UNIQUE (cpf)
+)
+
+
+2025-09-17 03:10:40,014 - sqlalchemy.engine.Engine - INFO - [no key 0.00045s] {}
+2025-09-17 03:10:40,016 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-09-17 03:10:40,016 - BibliotecaApp - ERROR - ❌ Erro ao criar tabelas: (psycopg2.errors.InvalidSchemaName) schema "biblioteca" does not exist
+LINE 2: CREATE TABLE biblioteca.usuarios (
+                     ^
+
+[SQL: 
+CREATE TABLE biblioteca.usuarios (
+	id SERIAL NOT NULL, 
+	nome VARCHAR(100) NOT NULL, 
+	email VARCHAR(100) NOT NULL, 
+	senha_hash VARCHAR(255) NOT NULL, 
+	email_confirmado BOOLEAN, 
+	email_confirmado_em TIMESTAMP WITHOUT TIME ZONE, 
+	cpf VARCHAR(14), 
+	telefone VARCHAR(15), 
+	data_nascimento DATE, 
+	ativo BOOLEAN, 
+	is_admin BOOLEAN NOT NULL, 
+	created_at TIMESTAMP WITHOUT TIME ZONE, 
+	updated_at TIMESTAMP WITHOUT TIME ZONE, 
+	PRIMARY KEY (id), 
+	UNIQUE (cpf)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-09-17 03:12:48,360 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-17 03:12:48,361 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-17 03:12:48,389 - sqlalchemy.engine.Engine - INFO - select pg_catalog.version()
+2025-09-17 03:12:48,389 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-09-17 03:12:48,391 - sqlalchemy.engine.Engine - INFO - select current_schema()
+2025-09-17 03:12:48,392 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-09-17 03:12:48,393 - sqlalchemy.engine.Engine - INFO - show standard_conforming_strings
+2025-09-17 03:12:48,393 - sqlalchemy.engine.Engine - INFO - [raw sql] {}
+2025-09-17 03:12:48,395 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-09-17 03:12:48,397 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:12:48,398 - sqlalchemy.engine.Engine - INFO - [generated in 0.00100s] {'table_name': 'usuarios', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:12:48,400 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:12:48,400 - sqlalchemy.engine.Engine - INFO - [cached since 0.002896s ago] {'table_name': 'endereco_usuarios', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:12:48,401 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:12:48,402 - sqlalchemy.engine.Engine - INFO - [cached since 0.004302s ago] {'table_name': 'cartoes_credito', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:12:48,402 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:12:48,403 - sqlalchemy.engine.Engine - INFO - [cached since 0.00538s ago] {'table_name': 'confirmacoes_email', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:12:48,404 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:12:48,404 - sqlalchemy.engine.Engine - INFO - [cached since 0.006654s ago] {'table_name': 'livros', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:12:48,405 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:12:48,405 - sqlalchemy.engine.Engine - INFO - [cached since 0.00767s ago] {'table_name': 'pedidos', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:12:48,406 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:12:48,406 - sqlalchemy.engine.Engine - INFO - [cached since 0.008871s ago] {'table_name': 'itens_carrinho', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:12:48,407 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_namespace.nspname = %(nspname_1)s
+2025-09-17 03:12:48,408 - sqlalchemy.engine.Engine - INFO - [cached since 0.01022s ago] {'table_name': 'itens_pedido', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'biblioteca'}
+2025-09-17 03:12:48,409 - sqlalchemy.engine.Engine - INFO - SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = %(typname_1)s AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2025-09-17 03:12:48,410 - sqlalchemy.engine.Engine - INFO - [generated in 0.00069s] {'typname_1': 'statuspedido', 'nspname_1': 'pg_catalog'}
+2025-09-17 03:12:48,411 - sqlalchemy.engine.Engine - INFO - CREATE TYPE statuspedido AS ENUM ('PENDENTE', 'CONFIRMADO', 'ENVIADO', 'ENTREGUE', 'CANCELADO')
+2025-09-17 03:12:48,412 - sqlalchemy.engine.Engine - INFO - [no key 0.00074s] {}
+2025-09-17 03:12:48,413 - sqlalchemy.engine.Engine - INFO - 
+CREATE TABLE biblioteca.usuarios (
+	id SERIAL NOT NULL, 
+	nome VARCHAR(100) NOT NULL, 
+	email VARCHAR(100) NOT NULL, 
+	senha_hash VARCHAR(255) NOT NULL, 
+	email_confirmado BOOLEAN, 
+	email_confirmado_em TIMESTAMP WITHOUT TIME ZONE, 
+	cpf VARCHAR(14), 
+	telefone VARCHAR(15), 
+	data_nascimento DATE, 
+	ativo BOOLEAN, 
+	is_admin BOOLEAN NOT NULL, 
+	created_at TIMESTAMP WITHOUT TIME ZONE, 
+	updated_at TIMESTAMP WITHOUT TIME ZONE, 
+	PRIMARY KEY (id), 
+	UNIQUE (cpf)
+)
+
+
+2025-09-17 03:12:48,414 - sqlalchemy.engine.Engine - INFO - [no key 0.00052s] {}
+2025-09-17 03:12:48,415 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-09-17 03:12:48,416 - BibliotecaApp - ERROR - ❌ Erro ao criar tabelas: (psycopg2.errors.InvalidSchemaName) schema "biblioteca" does not exist
+LINE 2: CREATE TABLE biblioteca.usuarios (
+                     ^
+
+[SQL: 
+CREATE TABLE biblioteca.usuarios (
+	id SERIAL NOT NULL, 
+	nome VARCHAR(100) NOT NULL, 
+	email VARCHAR(100) NOT NULL, 
+	senha_hash VARCHAR(255) NOT NULL, 
+	email_confirmado BOOLEAN, 
+	email_confirmado_em TIMESTAMP WITHOUT TIME ZONE, 
+	cpf VARCHAR(14), 
+	telefone VARCHAR(15), 
+	data_nascimento DATE, 
+	ativo BOOLEAN, 
+	is_admin BOOLEAN NOT NULL, 
+	created_at TIMESTAMP WITHOUT TIME ZONE, 
+	updated_at TIMESTAMP WITHOUT TIME ZONE, 
+	PRIMARY KEY (id), 
+	UNIQUE (cpf)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/f405)

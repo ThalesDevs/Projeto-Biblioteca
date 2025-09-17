@@ -1,16 +1,18 @@
+import os
+from pathlib import Path
+from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
-import os
-from dotenv import load_dotenv
 
-load_dotenv()
+# Carrega o .env, mesmo dentro do container
+dotenv_path = Path(__file__).parent.parent / ".env"
+load_dotenv(dotenv_path)
 
-# Usar variável de ambiente ou fallback
 DATABASE_URL = os.getenv(
     "DATABASE_URL",
-    "postgresql://biblioteca:123456@localhost:5433/biblioteca"
+    "postgresql+psycopg2://biblioteca:123456@localhost:5432/biblioteca"
 )
 
-engine = create_engine(DATABASE_URL)
+engine = create_engine(DATABASE_URL, echo=True)  # echo=True para debug
 SessionLocal = sessionmaker(bind=engine, autocommit=False, autoflush=False)
 Base = declarative_base()
