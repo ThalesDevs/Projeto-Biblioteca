@@ -105,12 +105,12 @@ def obter_livro_por_slug(
 def criar_livro(
         livro: LivroCreate,
         db: Session = Depends(get_db),
-        user_data: Optional[dict] = Depends(get_current_user_dependency)
+     #   user_data: Optional[dict] = Depends(get_current_user_dependency)
 ):
     """Cria um novo livro"""
     # Verificar autenticação
-    if not user_data:
-        raise HTTPException(status_code=401, detail="Não autenticado")
+ #   if not user_data:
+   #     raise HTTPException(status_code=401, detail="Não autenticado")
 
     try:
         service = LivroService(db)

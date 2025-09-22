@@ -8,6 +8,8 @@ from app.repositories.livro_repository import LivroRepository
 from app.domain.schemas.cria_livro import LivroCreate, LivroUpdate
 from fastapi import HTTPException, status
 
+from app.utils.atualizar_capas_pg import buscar_url_capa
+
 
 class LivroService:
     def __init__(self, db: Session):
@@ -91,6 +93,11 @@ class LivroService:
         while self.repo.buscar_por_slug(slug):
             slug = f"{slug_original}-{contador}"
             contador += 1
+
+        # Buscar capa automaticamente se não tiver
+        capa_url = buscar_url_capa(livro.titulo, livro.autor)
+        if capa_url:
+            livro.capa_url = capa_url
 
         return self.repo.adicionar(livro, slug)
 
@@ -181,7 +188,7 @@ class LivroService:
 
     # ---------------------- DELETAR ----------------------
     def deletar_livro(self, livro_id: int) -> bool:
-        """Deleta um livro - CORRIGIDO"""
+
         if not isinstance(livro_id, int) or livro_id <= 0:
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST,
@@ -301,3 +308,27 @@ class LivroService:
             "livros_sem_estoque": livros_sem_estoque,
             "livros_com_estoque": total_livros - livros_sem_estoque
         }
+
+    def atualizar_capas_existentes(self):
+        """Atualiza as capas de todos os livros que ainda não têm capa"""
+        livros_sem_capa = self.db.query(Livro).filter(
+            (Livro.capa_url == None) | (Livro.capa_url == '')
+        ).all()
+
+        if not livros_sem_capa:
+            print("Todos os livros já possuem capa.")
+            return
+
+        print(f"Atualizando capas de {len(livros_sem_capa)} livros...")
+
+        for livro in livros_sem_capa:
+            capa_url = buscar_url_capa(livro.titulo, livro.autor)
+            if capa_url:
+                livro.capa_url = capa_url
+                self.db.add(livro)
+                print(f"Capa atualizada para: {livro.titulo} - {livro.autor}")
+            else:
+                print(f"Não foi possível encontrar capa para: {livro.titulo} - {livro.autor}")
+
+        self.db.commit()
+        print("Atualização de capas concluída!")

@@ -12,3 +12,4 @@ starlette~=0.46.2
 alembic
 itsdangerous
 python-multipart
+requests

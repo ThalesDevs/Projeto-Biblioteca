@@ -1,6 +1,7 @@
 from sqlalchemy.orm import Session
 from app.domain.models.Livro.livro import Livro
 from app.domain.schemas.cria_livro import LivroCreate, LivroUpdate
+from app.utils.atualizar_capas_pg import buscar_url_capa
 
 
 class LivroRepository:
@@ -21,6 +22,12 @@ class LivroRepository:
 
         if slug:
             livro_dict['slug'] = slug
+
+
+        if not livro_dict.get('capa_url'):
+            url_capa = buscar_url_capa(livro_dict['titulo'], livro_dict['autor'])
+            if url_capa:
+                livro_dict['capa_url'] = url_capa
 
         livro = Livro(**livro_dict)
         self.db.add(livro)

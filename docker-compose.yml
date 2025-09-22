@@ -1,10 +1,9 @@
+version: '3.8'
 
 services:
   biblioteca_db:
-    image: postgres:17.6
+    image: postgres:17
     container_name: biblioteca_db
-    env_file:
-      - ./.env
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
@@ -13,19 +12,34 @@ services:
       - "${POSTGRES_PORT}:5432"
     volumes:
       - biblioteca_data:/var/lib/postgresql/data
+      - ./init-db:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
 
   biblioteca_web:
     build: .
     container_name: biblioteca_web
-    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
-    volumes:
-      - .:/app
+    # REMOVER/COMENTAR ESTA LINHA:
+    # volumes:
+    #   - .:/app
     ports:
       - "8000:8000"
-    depends_on:
-      - biblioteca_db
     environment:
       DATABASE_URL: postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@biblioteca_db:5432/${POSTGRES_DB}
+      POSTGRES_HOST: biblioteca_db
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_PORT: 5432
+    depends_on:
+      biblioteca_db:
+        condition: service_healthy
+    restart: unless-stopped
 
 volumes:
   biblioteca_data:
+    driver: local

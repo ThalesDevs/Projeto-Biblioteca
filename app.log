@@ -24284,3 +24284,143 @@ CREATE TABLE biblioteca.usuarios (
 
 ]
 (Background on this error at: https://sqlalche.me/e/20/f405)
+2025-09-17 13:15:38,825 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-17 13:15:38,827 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-17 13:15:38,851 - BibliotecaApp - ERROR - ❌ Erro ao criar tabelas: (psycopg2.errors.InvalidSchemaName) schema "biblioteca" does not exist
+LINE 2: CREATE TABLE biblioteca.usuarios (
+                     ^
+
+[SQL: 
+CREATE TABLE biblioteca.usuarios (
+	id SERIAL NOT NULL, 
+	nome VARCHAR(100) NOT NULL, 
+	email VARCHAR(100) NOT NULL, 
+	senha_hash VARCHAR(255) NOT NULL, 
+	email_confirmado BOOLEAN, 
+	email_confirmado_em TIMESTAMP WITHOUT TIME ZONE, 
+	cpf VARCHAR(14), 
+	telefone VARCHAR(15), 
+	data_nascimento DATE, 
+	ativo BOOLEAN, 
+	is_admin BOOLEAN NOT NULL, 
+	created_at TIMESTAMP WITHOUT TIME ZONE, 
+	updated_at TIMESTAMP WITHOUT TIME ZONE, 
+	PRIMARY KEY (id), 
+	UNIQUE (cpf)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-09-17 13:19:39,398 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-17 13:19:39,399 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-17 13:19:39,449 - BibliotecaApp - INFO - ✅ Tabelas criadas/verificadas com sucesso
+2025-09-17 10:24:56,496 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-17 10:24:56,496 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-17 10:24:56,530 - BibliotecaApp - ERROR - ❌ Erro ao criar tabelas: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "biblioteca"
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2025-09-17 13:28:35,028 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-17 13:28:35,029 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-17 13:28:35,054 - BibliotecaApp - INFO - ✅ Tabelas criadas/verificadas com sucesso
+2025-09-17 13:28:44,374 - BibliotecaApp - INFO - GET / → 200 (0.041s)
+2025-09-17 13:28:44,602 - BibliotecaApp - INFO - GET /favicon.ico → 404 (0.017s)
+2025-09-17 13:28:47,372 - BibliotecaApp - INFO - GET /auth/login → 404 (0.008s)
+2025-09-17 13:28:48,859 - BibliotecaApp - INFO - GET /auth/cadastro → 404 (0.007s)
+2025-09-17 13:28:50,111 - BibliotecaApp - INFO - GET /carrinho → 307 (0.000s)
+2025-09-17 13:28:50,118 - CarrinhoRouter - ERROR - Erro ao carregar carrinho: 'NoneType' object has no attribute 'id'
+Traceback (most recent call last):
+  File "/app/app/routers/carrinho_router.py", line 28, in pagina_carrinho
+    itens = service.listar_itens(user.id)
+                                 ^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'id'
+2025-09-17 13:28:50,158 - BibliotecaApp - INFO - GET /carrinho/ → 500 (0.042s)
+2025-09-17 13:28:51,510 - BibliotecaApp - INFO - GET /livros → 307 (0.000s)
+2025-09-17 13:28:51,563 - BibliotecaApp - INFO - GET /livros/ → 200 (0.046s)
+2025-09-17 13:28:52,934 - BibliotecaApp - INFO - GET / → 200 (0.009s)
+2025-09-17 13:28:54,065 - BibliotecaApp - INFO - GET /auth/login → 404 (0.007s)
+2025-09-17 13:28:55,231 - BibliotecaApp - INFO - GET / → 200 (0.006s)
+2025-09-17 13:29:03,283 - BibliotecaApp - INFO - GET /auth/login → 404 (0.006s)
+2025-09-17 13:29:04,536 - BibliotecaApp - INFO - GET / → 200 (0.006s)
+2025-09-17 13:29:05,651 - BibliotecaApp - INFO - GET /auth/login → 404 (0.007s)
+2025-09-17 13:29:07,606 - BibliotecaApp - INFO - GET /livros → 307 (0.000s)
+2025-09-17 13:29:07,622 - BibliotecaApp - INFO - GET /livros/ → 200 (0.009s)
+2025-09-17 13:29:08,190 - BibliotecaApp - INFO - GET / → 200 (0.007s)
+2025-09-17 14:01:32,549 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-17 14:01:32,549 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-17 14:01:32,583 - BibliotecaApp - INFO - ✅ Tabelas criadas/verificadas com sucesso
+2025-09-17 14:08:52,163 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-17 14:08:52,164 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-17 14:08:52,195 - BibliotecaApp - INFO - ✅ Tabelas criadas/verificadas com sucesso
+2025-09-17 16:35:35,593 - BibliotecaApp - INFO - GET / → 200 (0.096s)
+2025-09-17 16:35:37,886 - BibliotecaApp - INFO - GET /auth/login → 404 (0.015s)
+2025-09-17 16:35:52,757 - BibliotecaApp - INFO - GET / → 200 (0.007s)
+2025-09-17 16:35:56,980 - BibliotecaApp - INFO - GET / → 200 (0.006s)
+2025-09-17 16:36:14,008 - BibliotecaApp - INFO - GET /docs → 200 (0.002s)
+2025-09-17 16:36:14,978 - BibliotecaApp - INFO - GET /openapi.json → 200 (0.801s)
+2025-09-17 20:04:52,476 - BibliotecaApp - INFO - GET /docs → 200 (0.015s)
+2025-09-17 20:04:52,607 - BibliotecaApp - INFO - GET /openapi.json → 200 (0.015s)
+2025-09-18 13:53:50,180 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-18 13:53:50,181 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-18 13:53:50,225 - BibliotecaApp - INFO - ✅ Tabelas criadas/verificadas com sucesso
+2025-09-18 16:58:17,079 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-18 16:58:17,079 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-18 16:58:17,111 - BibliotecaApp - INFO - ✅ Tabelas criadas/verificadas com sucesso
+2025-09-18 16:59:13,568 - BibliotecaApp - INFO - GET /docs → 200 (0.001s)
+2025-09-18 16:59:13,769 - BibliotecaApp - INFO - GET /openapi.json → 200 (0.024s)
+2025-09-18 16:59:21,428 - BibliotecaApp - INFO - GET / → 200 (0.035s)
+2025-09-18 16:59:21,742 - BibliotecaApp - INFO - GET /favicon.ico → 404 (0.015s)
+2025-09-18 16:59:23,793 - BibliotecaApp - INFO - GET /auth/login → 404 (0.006s)
+2025-09-18 16:59:25,158 - BibliotecaApp - INFO - GET /auth/cadastro → 404 (0.007s)
+2025-09-18 16:59:25,858 - BibliotecaApp - INFO - GET /carrinho → 307 (0.000s)
+2025-09-18 16:59:25,866 - CarrinhoRouter - ERROR - Erro ao carregar carrinho: 'NoneType' object has no attribute 'id'
+Traceback (most recent call last):
+  File "/app/app/routers/carrinho_router.py", line 28, in pagina_carrinho
+    itens = service.listar_itens(user.id)
+                                 ^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'id'
+2025-09-18 16:59:25,893 - BibliotecaApp - INFO - GET /carrinho/ → 500 (0.030s)
+2025-09-18 16:59:26,756 - BibliotecaApp - INFO - GET /livros → 307 (0.000s)
+2025-09-18 16:59:26,817 - BibliotecaApp - INFO - GET /livros/ → 200 (0.056s)
+2025-09-18 16:59:27,627 - BibliotecaApp - INFO - GET / → 200 (0.007s)
+2025-09-22 09:44:09,626 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-22 09:44:09,628 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-22 09:44:09,661 - BibliotecaApp - ERROR - ❌ Erro ao criar tabelas: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "biblioteca"
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2025-09-22 12:44:10,749 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-22 12:44:10,750 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-22 12:44:10,775 - BibliotecaApp - INFO - ✅ Tabelas criadas/verificadas com sucesso
+2025-09-22 09:51:12,872 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-22 09:51:12,872 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-22 09:51:12,904 - BibliotecaApp - ERROR - ❌ Erro ao criar tabelas: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "biblioteca"
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2025-09-22 12:52:46,849 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-22 12:52:46,849 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-22 12:52:46,890 - BibliotecaApp - INFO - ✅ Tabelas criadas/verificadas com sucesso
+2025-09-22 13:25:38,647 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-22 13:25:38,647 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-22 13:25:38,666 - BibliotecaApp - INFO - ✅ Tabelas criadas/verificadas com sucesso
+2025-09-22 13:32:02,140 - BibliotecaApp - INFO - GET / → 200 (0.054s)
+2025-09-22 13:32:02,277 - BibliotecaApp - INFO - GET /favicon.ico → 404 (0.018s)
+2025-09-22 13:32:05,561 - BibliotecaApp - INFO - GET / → 200 (0.006s)
+2025-09-22 13:32:06,315 - BibliotecaApp - INFO - GET / → 200 (0.006s)
+2025-09-22 13:32:07,095 - BibliotecaApp - INFO - GET / → 200 (0.008s)
+2025-09-22 13:32:07,313 - BibliotecaApp - INFO - GET / → 200 (0.007s)
+2025-09-22 13:32:07,502 - BibliotecaApp - INFO - GET / → 200 (0.009s)
+2025-09-22 13:32:07,676 - BibliotecaApp - INFO - GET / → 200 (0.006s)
+2025-09-22 13:32:07,851 - BibliotecaApp - INFO - GET / → 200 (0.005s)
+2025-09-22 13:32:09,796 - BibliotecaApp - INFO - GET /auth/login → 404 (0.006s)
+2025-09-22 13:32:11,221 - BibliotecaApp - INFO - GET / → 200 (0.006s)
+2025-09-22 13:32:12,927 - BibliotecaApp - INFO - GET /livros → 307 (0.000s)
+2025-09-22 13:32:12,995 - BibliotecaApp - INFO - GET /livros/ → 200 (0.060s)
+2025-09-22 13:34:48,380 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-22 13:34:48,381 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-22 13:34:48,400 - BibliotecaApp - INFO - ✅ Tabelas criadas/verificadas com sucesso
+2025-09-22 13:39:43,343 - BibliotecaApp - INFO - === INICIANDO APLICAÇÃO BIBLIOTECA ONLINE ===
+2025-09-22 13:39:43,343 - BibliotecaApp - INFO - Criando/verificando tabelas do banco de dados...
+2025-09-22 13:39:43,363 - BibliotecaApp - INFO - ✅ Tabelas criadas/verificadas com sucesso
+2025-09-22 14:20:31,828 - BibliotecaApp - INFO - GET /livros/ → 200 (0.350s)
+2025-09-22 14:20:37,703 - BibliotecaApp - INFO - GET /auth/login → 404 (0.034s)
+2025-09-22 14:20:39,196 - BibliotecaApp - INFO - GET /livros → 307 (0.000s)
+2025-09-22 14:20:39,214 - BibliotecaApp - INFO - GET /livros/ → 200 (0.009s)
