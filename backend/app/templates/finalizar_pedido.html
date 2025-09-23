@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Finalizar Pedido{% endblock %}
+
+{% block content %}
+<h2>Resumo do Pedido</h2>
+
+{% if sacola %}
+<ul>
+    {% for item in sacola %}
+        <li>
+            <strong>{{ item.livro.titulo }}</strong> - R$ {{ item.livro.preco }} × {{ item.quantidade }} = R$ {{ item.livro.preco * item.quantidade }}
+        </li>
+    {% endfor %}
+</ul>
+
+<p><strong>Total:</strong> R$ {{ total }}</p>
+
+<form method="post" action="/pedido/finalizar">
+    <button type="submit">Confirmar Pedido</button>
+</form>
+
+{% else %}
+<p>Sua sacola está vazia.</p>
+{% endif %}
+{% endblock %}

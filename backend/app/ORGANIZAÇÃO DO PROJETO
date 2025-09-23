@@ -1,0 +1,101 @@
+
+**MANTIDO** apenas:
+- `/` (página inicial) - única rota frontend do main
+- `/health` (verificação de saúde)
+- `/info` (informações do sistema)
+- Handlers de erro (404, 500)
+- Middleware de logging e CORS
+
+## 🎯 **Nova Estrutura Organizada**
+
+### **main.py**
+```
+📋 RESPONSABILIDADES:
+├── 🏠 Rota principal (/)
+├── 🔧 Configuração da aplicação
+├── 📡 Middleware e CORS
+├── ❌ Handlers de erro
+└── 📊 Rotas de sistema (/health, /info)
+```
+
+### **auth_router.py** (`/api/auth`)
+```
+🔐 ROTAS DE AUTENTICAÇÃO:
+├── GET/POST /login
+├── GET     /logout
+├── GET/POST /cadastro
+├── GET     /perfil
+└── GET     /status
+```
+
+### **livro_router.py** (`/api/livros`)
+```
+📚 ROTAS DE LIVROS:
+├── GET  / (página HTML)
+├── GET  /listar
+├── POST /
+├── POST /cadastrar-form
+└── ... (todas as rotas de livros)
+```
+
+### **carrinho_router.py** (`/api/carrinho`)
+```
+🛒 ROTAS DO CARRINHO:
+├── GET  / (página HTML)
+├── GET  /itens
+├── POST /adicionar
+└── ... (todas as rotas do carrinho)
+```
+
+### **usuario_router.py** (`/api/usuarios`)
+```
+👥 ROTAS DE USUÁRIOS:
+├── GET  / (página HTML)
+├── POST /cadastrar
+├── POST /cadastrar-form
+└── ... (todas as rotas de usuários)
+```
+
+### **pedido_router.py** (`/api/pedidos`)
+```
+📝 ROTAS DE PEDIDOS:
+├── GET  / (página HTML)
+├── GET  /listar
+├── POST /finalizar
+└── ... (todas as rotas de pedidos)
+```
+
+```
+🏠 FRONTEND DIRETO:
+├── / (home)
+
+🔐 AUTENTICAÇÃO:
+├── /api/auth/login
+├── /api/auth/cadastro
+├── /api/auth/logout
+└── /api/auth/perfil
+
+📚 LIVROS:
+├── /api/livros/ (página)
+├── /api/livros/listar (JSON)
+└── /api/livros/...
+
+🛒 CARRINHO:
+├── /api/carrinho/ (página)
+├── /api/carrinho/itens (JSON)
+└── /api/carrinho/...
+
+👥 USUÁRIOS:
+├── /api/usuarios/ (página)
+├── /api/usuarios/listar (JSON)
+└── /api/usuarios/...
+
+📝 PEDIDOS:
+├── /api/pedidos/ (página)
+├── /api/pedidos/listar (JSON)
+└── /api/pedidos/...
+```
+
+---
+
+✨ **Resultado**: Código mais limpo, organizado e fácil de manter! Cada arquivo tem sua responsabilidade bem definida.

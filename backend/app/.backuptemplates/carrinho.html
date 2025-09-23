@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block title %}Seu Carrinho{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-6 py-8">
+    <h2 class="text-3xl font-bold mb-6">Itens no Carrinho</h2>
+
+    {% if itens %}
+    <div class="space-y-4">
+        {% for item in itens %}
+        <div id="item-{{ item.livro.id }}" class="bg-white shadow rounded-lg p-4 flex items-center justify-between">
+            <div class="flex-1">
+                <h3 class="text-lg font-semibold">{{ item.livro.titulo }}</h3>
+                <p class="text-gray-600">Quantidade: {{ item.quantidade }}</p>
+                <p class="text-blue-600 font-bold">R$ {{ "%.2f"|format(item.livro.preco * item.quantidade) }}</p>
+            </div>
+            <button onclick="removerItem({{ item.livro.id }})"
+                    class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">
+                Remover
+            </button>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Resumo -->
+    <div class="mt-8 bg-white p-6 rounded-lg shadow">
+        <h3 class="text-xl font-semibold mb-4">Resumo do Pedido</h3>
+
+        {% set total = namespace(valor=0) %}
+        {% for item in itens %}
+            {% set total.valor = total.valor + (item.livro.preco * item.quantidade) %}
+        {% endfor %}
+
+        <p class="mb-2">Total de itens: <span class="font-bold">{{ itens|length }}</span></p>
+        <p class="mb-4">Valor total: <span class="font-bold text-blue-600">R$ {{ "%.2f"|format(total.valor) }}</span></p>
+
+        <form action="/pedidos/finalizar" method="post">
+            <button type="submit" class="w-full bg-green-600 text-white py-3 rounded hover:bg-green-700">
+                Finalizar Pedido
+            </button>
+        </form>
+    </div>
+    {% else %}
+    <div class="text-center py-12">
+        <p class="text-gray-700 text-lg mb-4">Seu carrinho está vazio.</p>
+        <a href="/livros" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">
+            Ver Livros
+        </a>
+    </div>
+    {% endif %}
+</div>
+
+<script>
+async function removerItem(livroId) {
+    try {
+        const response = await fetch(`/carrinho/remover/${livroId}`, {
+            method: 'DELETE'
+        });
+
+        if (response.ok) {
+            // Remove o item da página
+            document.getElementById(`item-${livroId}`).remove();
+
+            // Se não há mais itens, recarrega a página
+            const itensRestantes = document.querySelectorAll('[id^="item-"]');
+            if (itensRestantes.length === 0) {
+                location.reload();
+            }
+        } else {
+            alert('Erro ao remover item. Tente novamente.');
+        }
+    } catch (error) {
+        alert('Erro ao remover item. Verifique sua conexão.');
+    }
+}
+</script>
+{% endblock %}
