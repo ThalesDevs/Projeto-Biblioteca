@@ -21,13 +21,12 @@ services:
     restart: unless-stopped
 
   biblioteca_web:
-    build: .
+    build: backend
     container_name: biblioteca_web
-    # REMOVER/COMENTAR ESTA LINHA:
-    # volumes:
-    #   - .:/app
     ports:
       - "8000:8000"
+    volumes:
+      - ./frontend_dist:/app/frontend_dist
     environment:
       DATABASE_URL: postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@biblioteca_db:5432/${POSTGRES_DB}
       POSTGRES_HOST: biblioteca_db
