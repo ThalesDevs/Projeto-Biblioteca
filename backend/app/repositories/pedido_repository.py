@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
-from app.domain.models.vendas.pedidos import Pedido
-from app.domain.models.vendas.item_carrinho import ItemCarrinho
-from app.domain.models.vendas.item_pedido import ItemPedido
+from backend.app.domain.models.vendas.pedidos import Pedido
+from backend.app.domain.models.vendas.item_carrinho import ItemCarrinho
+from backend.app.domain.models.vendas.item_pedido import ItemPedido
 
 class PedidoRepository:
     def __init__(self, db: Session):

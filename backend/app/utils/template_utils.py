@@ -3,9 +3,9 @@ from fastapi.templating import Jinja2Templates
 from sqlalchemy.orm import Session
 from typing import Optional, Dict, Any
 
-from app.dependencies import get_db
-from app.service.usuario_service import UsuarioService
-from app.utils.auth import verificar_token
+from backend.app.dependencies import get_db
+from backend.app.service.usuario_service import UsuarioService
+from backend.app.utils.auth import verificar_token
 
 
 def get_current_user_from_request(request: Request, db: Session) -> Optional[Any]:

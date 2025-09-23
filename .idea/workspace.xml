@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7c9e1cd8-be45-434d-8358-9c7cbb239174" name="Changes" comment="adicionando front end com angular">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/houter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/domain/models/Livro/livro.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/domain/models/Livro/livro.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/domain/models/enums.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/domain/models/enums.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/domain/models/usuario/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/domain/models/usuario/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/domain/models/usuario/cartao_credito.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/domain/models/usuario/cartao_credito.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/domain/models/usuario/confirmacao_email.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/domain/models/usuario/confirmacao_email.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/domain/models/usuario/endereco_usuarios.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/domain/models/usuario/endereco_usuarios.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/domain/models/usuario/usuario.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/domain/models/usuario/usuario.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/domain/models/vendas/item_carrinho.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/domain/models/vendas/item_carrinho.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/domain/models/vendas/item_pedido.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/domain/models/vendas/item_pedido.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/domain/models/vendas/pagamento.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/domain/models/vendas/pagamento.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/domain/models/vendas/pedido_pagamento_link.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/domain/models/vendas/pedido_pagamento_link.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/domain/models/vendas/pedidos.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/domain/models/vendas/pedidos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/repositories/carrinho_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/repositories/carrinho_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/repositories/confirmacao_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/repositories/confirmacao_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/repositories/livro_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/repositories/livro_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/repositories/pagamento_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/repositories/pagamento_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/repositories/pedido_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/repositories/pedido_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/repositories/usuario_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/repositories/usuario_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/routers/admin_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/routers/admin_router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/routers/auth_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/routers/auth_router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/routers/carrinho_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/routers/carrinho_router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/routers/email_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/routers/email_router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/routers/livro_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/routers/livro_router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/routers/pagamento_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/routers/pagamento_router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/routers/pedido_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/routers/pedido_router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/routers/usuario_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/routers/usuario_router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/service/auth_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/service/auth_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/service/carrinho_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/service/carrinho_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/service/email_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/service/email_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/service/livro_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/service/livro_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/service/pagamento_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/service/pagamento_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/service/pedido_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/service/pedido_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/service/usuario_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/service/usuario_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/templates/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/templates/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/templates/cadastro.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/templates/cadastro.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/templates/carrinho.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/templates/carrinho.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/templates/editar_perfil.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/templates/editar_perfil.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/templates/livro.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/templates/livro.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/templates/pedido.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/templates/pedido.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/main.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ThalesDevs&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:ThalesDevs/Projeto-Biblioteca.git&quot;,
+    &quot;accountId&quot;: &quot;827f1ac6-6354-47b7-a98e-cf97be0f74ed&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/app/utils/atualiza_capas_pg.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2zgzaxN0wbDP0hD1rOrDo6WNs50" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.Rodar Projeto.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.auth_router.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.database.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.livro_repository.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.main.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.pedidos.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.schemas.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.usuario_router.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHELLCHECK.PATH&quot;: &quot;C:\\Users\\Colaborador\\AppData\\Roaming\\JetBrains\\PyCharm2025.1\\plugins\\Shell Script\\shellcheck.exe&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Projetos/Bibliotec2.1/backend/frontend_dist&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Projetos\\Bibliotec2.1\\frontend\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Projetos\Bibliotec2.1\backend\frontend_dist" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Projetos\Bibliotec2.1\backend" />
+      <recent name="C:\Projetos\Bibliotec2.1\frontend" />
+      <recent name="C:\Projetos\Bibliotec2.1" />
+      <recent name="C:\Projetos\Bibliotec2.1\alembic" />
+      <recent name="C:\Projetos\Bibliotec2.1\app" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Rodar Projeto" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Bibliotec2" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Projetos\Bibliotec2.1\backend\main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Rodar Projeto" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-PY-251.28293.52" />
+        <option value="bundled-python-sdk-c84de207d46e-64d779b69b7a-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.28293.52" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7c9e1cd8-be45-434d-8358-9c7cbb239174" name="Changes" comment="" />
+      <created>1752167570989</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1752167570989</updated>
+      <workItem from="1752167572168" duration="123000" />
+      <workItem from="1752168772040" duration="176000" />
+      <workItem from="1752173806535" duration="445000" />
+      <workItem from="1756635181169" duration="6289000" />
+      <workItem from="1756736272152" duration="45000" />
+      <workItem from="1756910055736" duration="2893000" />
+      <workItem from="1756994375699" duration="1284000" />
+      <workItem from="1757001550323" duration="321000" />
+      <workItem from="1757001919775" duration="2000" />
+      <workItem from="1757002110066" duration="24000" />
+      <workItem from="1757697140585" duration="280000" />
+      <workItem from="1757945423515" duration="201000" />
+      <workItem from="1757945644985" duration="221000" />
+      <workItem from="1758061808257" duration="471000" />
+      <workItem from="1758062292525" duration="13895000" />
+      <workItem from="1758112328881" duration="41000" />
+      <workItem from="1758113344507" duration="12710000" />
+      <workItem from="1758202588830" duration="912000" />
+      <workItem from="1758211928318" duration="909000" />
+      <workItem from="1758214499678" duration="53000" />
+      <workItem from="1758214578688" duration="224000" />
+      <workItem from="1758291321089" duration="7000" />
+      <workItem from="1758544947682" duration="14975000" />
+      <workItem from="1758566351722" duration="3636000" />
+      <workItem from="1758572445006" duration="292000" />
+      <workItem from="1758572948719" duration="214000" />
+      <workItem from="1758630394043" duration="70000" />
+      <workItem from="1758630479650" duration="2054000" />
+      <workItem from="1758633377842" duration="14001000" />
+    </task>
+    <task id="LOCAL-00001" summary="Preparando docker">
+      <option name="closed" value="true" />
+      <created>1758113746724</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1758113746724</updated>
+    </task>
+    <task id="LOCAL-00002" summary="adicionando novos métodos">
+      <option name="closed" value="true" />
+      <created>1758570565883</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1758570565883</updated>
+    </task>
+    <task id="LOCAL-00003" summary="adicionando novos métodos">
+      <option name="closed" value="true" />
+      <created>1758570601095</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1758570601095</updated>
+    </task>
+    <task id="LOCAL-00004" summary="adicionando front end com angular">
+      <option name="closed" value="true" />
+      <created>1758645649293</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1758645649293</updated>
+    </task>
+    <task id="LOCAL-00005" summary="adicionando front end com angular">
+      <option name="closed" value="true" />
+      <created>1758647800147</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1758647800147</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Preparando docker" />
+    <MESSAGE value="adicionando novos métodos" />
+    <MESSAGE value="adicionando front end com angular" />
+    <option name="LAST_COMMIT_MESSAGE" value="adicionando front end com angular" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Bibliotec2_1$Rodar_Projeto.coverage" NAME="Rodar Projeto Coverage Results" MODIFIED="1758545466074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

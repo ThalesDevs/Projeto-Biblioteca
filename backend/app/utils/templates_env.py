@@ -1,6 +1,6 @@
 from fastapi.templating import Jinja2Templates
 
-from app.utils.formatters import formatar_preco_sem_simbolo
+from backend.app.utils.formatters import formatar_preco_sem_simbolo
 
 templates = Jinja2Templates(directory="app/templates")  # ou "app/templates" se estiver lá
 

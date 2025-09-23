@@ -1,10 +1,10 @@
 from fastapi import APIRouter, Depends, status
 from sqlalchemy.orm import Session
 
-from app.dependencies import get_db
-from app.domain.schemas.cria_livro import LivroCreate, LivroOut
-from app.service.livro_service import LivroService
-from app.utils.auth import require_admin_user
+from backend.app.dependencies import get_db
+from backend.app.domain.schemas.cria_livro import LivroCreate, LivroOut
+from backend.app.service.livro_service import LivroService
+from backend.app.utils.auth import require_admin_user
 
 router = APIRouter()
 

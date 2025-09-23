@@ -5,10 +5,10 @@ from typing import List, Optional
 from datetime import datetime
 import logging
 
-from app.dependencies import get_db
-from app.domain.schemas.cria_livro import LivroCreate, LivroOut, LivroUpdate
-from app.service.livro_service import LivroService
-from app.utils.template_utils import render_template_with_user, get_current_user_dependency
+from backend.app.dependencies import get_db
+from backend.app.domain.schemas.cria_livro import LivroCreate, LivroOut, LivroUpdate
+from backend.app.service.livro_service import LivroService
+from backend.app.utils.template_utils import render_template_with_user, get_current_user_dependency
 
 logger = logging.getLogger("LivroRouter")
 router = APIRouter(tags=["Livros"])

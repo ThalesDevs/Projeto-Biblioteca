@@ -1,7 +1,7 @@
 # app/domain/models/usuario/endereco_usuario.py
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
-from app.database import Base
+from backend.app.database import Base
 
 class EnderecoUsuario(Base):
     __tablename__ = "endereco_usuarios"

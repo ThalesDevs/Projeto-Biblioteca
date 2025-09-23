@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
-from app.domain.models.usuario.usuario import Usuario
-from app.domain.schemas.cria_usuario import UsuarioCreate
+from backend.app.domain.models.usuario.usuario import Usuario
+from backend.app.domain.schemas.cria_usuario import UsuarioCreate
 from typing import Optional
 from datetime import datetime
 

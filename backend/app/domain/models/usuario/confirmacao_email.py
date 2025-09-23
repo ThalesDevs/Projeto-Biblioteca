@@ -2,7 +2,7 @@ import uuid
 from datetime import datetime
 from sqlalchemy import Column, Integer, String, Boolean, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
-from app.database import Base
+from backend.app.database import Base
 
 class ConfirmacaoEmail(Base):
     __tablename__ = "confirmacoes_email"

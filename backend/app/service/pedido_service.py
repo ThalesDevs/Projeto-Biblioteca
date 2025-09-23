@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
-from app.repositories.pedido_repository import PedidoRepository
-from app.domain.schemas.pedidos_schemas import ItemCarrinhoInput, PedidoOut
+from backend.app.repositories.pedido_repository import PedidoRepository
+from backend.app.domain.schemas.pedidos_schemas import ItemCarrinhoInput, PedidoOut
 
 class PedidoService:
     def __init__(self, db: Session):

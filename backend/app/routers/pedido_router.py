@@ -5,10 +5,10 @@ from sqlalchemy.orm import Session
 from typing import List, Optional
 import logging
 
-from app.dependencies import get_db
-from app.utils.template_utils import get_current_user_dependency, render_template_with_user
-from app.service.pedido_service import PedidoService
-from app.domain.schemas.pedidos_schemas import ItemCarrinhoInput, PedidoOut
+from backend.app.dependencies import get_db
+from backend.app.utils.template_utils import get_current_user_dependency, render_template_with_user
+from backend.app.service.pedido_service import PedidoService
+from backend.app.domain.schemas.pedidos_schemas import ItemCarrinhoInput, PedidoOut
 
 logger = logging.getLogger("PedidoRouter")
 router = APIRouter(tags=["Pedidos"])

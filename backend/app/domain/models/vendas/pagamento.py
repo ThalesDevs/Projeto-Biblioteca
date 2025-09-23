@@ -2,7 +2,7 @@
 from datetime import datetime
 from sqlalchemy import Column, Integer, String, ForeignKey, DateTime, Numeric, Enum
 from sqlalchemy.orm import relationship
-from app.database import Base
+from backend.app.database import Base
 from enum import Enum as PyEnum
 
 class StatusPagamento(str, PyEnum):

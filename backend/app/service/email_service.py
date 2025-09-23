@@ -3,7 +3,7 @@ import os
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from jinja2 import Environment, FileSystemLoader
-from app.domain.models.usuario.usuario import Usuario  # CORRIGIDO: path correto
+from backend.app.domain.models.usuario.usuario import Usuario  # CORRIGIDO: path correto
 from typing import Dict, Any
 
 

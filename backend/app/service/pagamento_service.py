@@ -1,10 +1,10 @@
 
 from sqlalchemy.orm import Session
 from decimal import Decimal
-from app.domain.models.vendas.pedidos import Pedido
-from app.domain.models.vendas.pagamento import StatusPagamento
-from app.repositories.pagamento_repository import PagamentoRepository
-from app.utils.credit_card import luhn_check, mask_card, sanitize_card, validate_expiry, validate_cvv
+from backend.app.domain.models.vendas.pedidos import Pedido
+from backend.app.domain.models.vendas.pagamento import StatusPagamento
+from backend.app.repositories.pagamento_repository import PagamentoRepository
+from backend.app.utils.credit_card import luhn_check, mask_card, sanitize_card, validate_expiry, validate_cvv
 
 class PagamentoService:
     def __init__(self, db: Session):

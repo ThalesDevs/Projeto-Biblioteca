@@ -2,8 +2,8 @@
 from datetime import datetime
 from sqlalchemy import Column, Integer, ForeignKey, DateTime, Enum
 from sqlalchemy.orm import relationship
-from app.database import Base
-from app.domain.models.enums import StatusPedido
+from backend.app.database import Base
+from backend.app.domain.models.enums import StatusPedido
 
 class Pedido(Base):
     __tablename__ = "pedidos"

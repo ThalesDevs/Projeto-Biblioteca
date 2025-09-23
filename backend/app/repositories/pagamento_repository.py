@@ -1,6 +1,6 @@
 
 from sqlalchemy.orm import Session
-from app.domain.models.vendas.pagamento import Pagamento, StatusPagamento
+from backend.app.domain.models.vendas.pagamento import Pagamento, StatusPagamento
 
 class PagamentoRepository:
     def __init__(self, db: Session):

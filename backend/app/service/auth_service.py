@@ -6,11 +6,11 @@ from jose import jwt
 from jose.exceptions import JWTError
 from passlib.context import CryptContext
 
-from app.domain.models.usuario.usuario import Usuario
-from app.domain.schemas.cria_usuario import UsuarioCreate
-from app.service.usuario_service import UsuarioService
-from app.repositories.confirmacao_repository import ConfirmacaoRepository
-from app.service.email_service import EmailService
+from backend.app.domain.models.usuario.usuario import Usuario
+from backend.app.domain.schemas.cria_usuario import UsuarioCreate
+from backend.app.service.usuario_service import UsuarioService
+from backend.app.repositories.confirmacao_repository import ConfirmacaoRepository
+from backend.app.service.email_service import EmailService
 
 # --------- Configurações JWT e senha ---------
 SECRET_KEY = "super_secreto_mude_em_producao"

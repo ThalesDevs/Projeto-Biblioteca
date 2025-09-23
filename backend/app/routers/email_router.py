@@ -1,10 +1,12 @@
+from urllib.request import Request
 
-from fastapi import APIRouter, Depends, HTTPException, status, Request
-from fastapi.responses import HTMLResponse, RedirectResponse
-from fastapi.templating import Jinja2Templates
+from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from app.dependencies import get_db
-from app.repositories.confirmacao_repository import ConfirmacaoRepository
+from starlette.responses import HTMLResponse
+from starlette.templating import Jinja2Templates
+
+from backend.app.database import get_db
+from backend.app.repositories.confirmacao_repository import ConfirmacaoRepository
 
 router = APIRouter(prefix="/email", tags=["Email"])
 templates = Jinja2Templates(directory="app/templates")

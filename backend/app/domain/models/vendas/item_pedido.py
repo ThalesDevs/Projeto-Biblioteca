@@ -2,7 +2,7 @@
 from datetime import datetime
 from sqlalchemy import Column, Integer, Numeric, ForeignKey, DateTime
 from sqlalchemy.orm import relationship
-from app.database import Base
+from backend.app.database import Base
 
 class ItemPedido(Base):
     __tablename__ = "itens_pedido"

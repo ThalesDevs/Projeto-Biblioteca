@@ -1,21 +1,22 @@
-from fastapi import APIRouter, Request, Form, Response, Depends, status, HTTPException
-from fastapi.responses import RedirectResponse
+from http.client import HTTPException
+from urllib.request import Request
+
+from fastapi import APIRouter, Form, Depends
+from fastapi.openapi.models import Response
 from sqlalchemy.orm import Session
+from starlette import status
+from starlette.responses import RedirectResponse
+from starlette.templating import Jinja2Templates
 
-from app.dependencies import get_db
-from app.domain.schemas.token_schema import TokenResponse
-from app.utils.auth import get_usuario_context_corrigido
-from app.service.auth_service import AuthService
-from fastapi.templating import Jinja2Templates
-
-from app.utils.template_utils import get_usuario_context
+from backend.app.database import get_db
+from backend.app.domain.schemas.token_schema import TokenResponse
+from backend.app.service.auth_service import AuthService
+from backend.app.utils.auth import get_usuario_context_corrigido
+from backend.app.utils.template_utils import get_usuario_context
 
 templates = Jinja2Templates(directory="app/templates")
 router = APIRouter(prefix="/auth", tags=["Autenticação"])
 
-
-from app.domain.schemas.token_schema import TokenResponse
-from app.service.auth_service import AuthService
 
 @router.post("/token", response_model=TokenResponse, summary="Gerar token JWT")
 def login_token(email: str = Form(...), senha: str = Form(...), db: Session = Depends(get_db)):

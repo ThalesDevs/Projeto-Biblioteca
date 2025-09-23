@@ -1,15 +1,17 @@
-from fastapi import APIRouter, Depends, Request, Form, HTTPException, status
-from fastapi.responses import HTMLResponse, RedirectResponse
-from sqlalchemy.orm import Session
-from pydantic import BaseModel
-import logging
+from urllib.request import Request
 
-from app.dependencies import get_db
-from app.utils.auth import get_current_user_dependency
-from app.service.carrinho_service import CarrinhoService
-from app.utils.templates_env import templates
-from app.utils.template_utils import render_template_with_user
-from app.domain.models.usuario.usuario import Usuario
+from fastapi import APIRouter, Depends
+from pydantic import BaseModel
+from sqlalchemy.orm import Session
+from sqlalchemy.testing.plugin.plugin_base import logging
+from starlette.responses import HTMLResponse
+
+from backend.app.database import get_db
+from backend.app.domain.models.usuario.usuario import Usuario
+from backend.app.service.carrinho_service import CarrinhoService
+from backend.app.utils.auth import get_current_user_dependency
+from backend.app.utils.template_utils import render_template_with_user
+from backend.main import templates
 
 router = APIRouter(tags=["Carrinho"])
 logger = logging.getLogger("CarrinhoRouter")

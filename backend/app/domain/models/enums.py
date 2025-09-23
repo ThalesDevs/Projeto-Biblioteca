@@ -1,4 +1,3 @@
-# app/domain/models/enums.py
 from enum import Enum
 
 class StatusPedido(str, Enum):

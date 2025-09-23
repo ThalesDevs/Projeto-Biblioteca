@@ -6,10 +6,10 @@ from jose import jwt
 from jose.exceptions import JWTError
 from datetime import datetime, timedelta
 
-from app.dependencies import get_db
-from app.domain.models.usuario.usuario import Usuario  # CORRIGIDO: path correto
-from app.service.auth_service import AuthService
-from app.service.usuario_service import UsuarioService
+from backend.app.dependencies import get_db
+from backend.app.domain.models.usuario.usuario import Usuario  # CORRIGIDO: path correto
+from backend.app.service.auth_service import AuthService
+from backend.app.service.usuario_service import UsuarioService
 
 SECRET_KEY = "super_secreto_mude_em_producao"
 ALGORITHM = "HS256"

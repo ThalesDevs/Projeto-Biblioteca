@@ -1,7 +1,7 @@
 from pydantic.v1 import BaseModel
 from sqlalchemy import Column, Integer, String, Numeric, DateTime
 from sqlalchemy.orm import relationship
-from app.database import Base
+from backend.app.database import Base
 
 class Livro(Base):
     __tablename__ = "livros"

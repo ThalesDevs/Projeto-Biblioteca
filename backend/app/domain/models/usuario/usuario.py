@@ -1,6 +1,6 @@
 from datetime import datetime
 from sqlalchemy import Column, Integer, String, Boolean, DateTime, Date
-from app.database import Base
+from backend.app.database import Base
 from sqlalchemy.orm import relationship
 
 class Usuario(Base):

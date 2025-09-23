@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
-from app.domain.models.usuario.confirmacao_email import ConfirmacaoEmail
-from app.domain.models.usuario.usuario import Usuario  # CORRIGIDO: path correto
+from backend.app.domain.models.usuario.confirmacao_email import ConfirmacaoEmail
+from backend.app.domain.models.usuario.usuario import Usuario  # CORRIGIDO: path correto
 from datetime import datetime, timedelta
 from typing import Optional
 

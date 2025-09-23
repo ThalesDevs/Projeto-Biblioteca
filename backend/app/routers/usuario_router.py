@@ -4,11 +4,11 @@ from fastapi.responses import RedirectResponse, HTMLResponse
 from sqlalchemy.orm import Session
 import logging
 
-from app.dependencies import get_db
-from app.service.usuario_service import UsuarioService
-from app.domain.schemas.cria_usuario import UsuarioCreate, UsuarioOut
-from app.utils.template_utils import render_template_with_user, get_current_user_dependency
-from app.utils.auth import require_authenticated_user
+from backend.app.dependencies import get_db
+from backend.app.service.usuario_service import UsuarioService
+from backend.app.domain.schemas.cria_usuario import UsuarioCreate, UsuarioOut
+from backend.app.utils.template_utils import render_template_with_user, get_current_user_dependency
+from backend.app.utils.auth import require_authenticated_user
 from fastapi.templating import Jinja2Templates
 
 # Configurar templates

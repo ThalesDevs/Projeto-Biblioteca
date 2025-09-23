@@ -1,7 +1,7 @@
-from app.database import SessionLocal
+from backend.app.database import SessionLocal
 from fastapi import Depends, HTTPException, Request
 from sqlalchemy.orm import Session
-from app.service.auth_service import AuthService
+from backend.app.service.auth_service import AuthService
 
 
 def get_db():

@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
-from app.domain.models.Livro.livro import Livro
-from app.domain.schemas.cria_livro import LivroCreate, LivroUpdate
-from app.utils.atualizar_capas_pg import buscar_url_capa
+from backend.app.domain.models.Livro.livro import Livro
+from backend.app.domain.schemas.cria_livro import LivroCreate, LivroUpdate
+from backend.app.utils.atualizar_capas_pg import buscar_url_capa
 
 
 class LivroRepository:

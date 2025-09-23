@@ -3,12 +3,12 @@ from sqlalchemy.orm import Session
 from typing import List, Optional
 import re
 
-from app.domain.models.Livro.livro import Livro
-from app.repositories.livro_repository import LivroRepository
-from app.domain.schemas.cria_livro import LivroCreate, LivroUpdate
+from backend.app.domain.models.Livro.livro import Livro
+from backend.app.repositories.livro_repository import LivroRepository
+from backend.app.domain.schemas.cria_livro import LivroCreate, LivroUpdate
 from fastapi import HTTPException, status
 
-from app.utils.atualizar_capas_pg import buscar_url_capa
+from backend.app.utils.atualizar_capas_pg import buscar_url_capa
 
 
 class LivroService:

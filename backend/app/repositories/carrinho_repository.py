@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from app.domain.models.vendas.item_carrinho import ItemCarrinho
+from backend.app.domain.models.vendas.item_carrinho import ItemCarrinho
 
 class CarrinhoRepository:
     def __init__(self, db: Session):
